@@ -12,11 +12,10 @@ I am not the creator of FluxEngine, this is just an adapter PCB, eventually a 3d
 The PCB is based on the [user-submitted PCB](http://cowlark.com/fluxengine/doc/building.html#if-you-want-to-use-a-pcb) on the FluxEngine site.
 
 Differences:  
-* Re-drawn in KiCAD instead of Eagle.  
-* Changed a few connections that I don't think were correct.  
-  - J1 pins 9,10 should not be connected to anything  
-  - J5 pins 3,4,5,6 should not be connected to anything  
-  - J5 pin 5 should be physically removed
+* Re-drawn in KiCAD instead of Eagle.
+* J1 9,10 NC
+* 34-pin 3,4,5,6 NC
+* 34-pin physically remove pin 5
 
 ## PARTS
 [DigiKey BOM with all parts](https://www.digikey.com/short/zb23f8pq)  
