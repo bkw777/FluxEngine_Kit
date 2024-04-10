@@ -1,9 +1,9 @@
 # FluxEngine Kit
 
-![](PCB/out/FluxEngine_IO.jpg)
-![](PCB/out/FluxEngine_IO.top.jpg)
-![](PCB/out/FluxEngine_IO.bottom.jpg)
-![](PCB/out/FluxEngine_IO.svg)
+![](PCB/out/FluxEngine_Hat.jpg)
+![](PCB/out/FluxEngine_Hat.top.jpg)
+![](PCB/out/FluxEngine_Hat.bottom.jpg)
+![](PCB/out/FluxEngine_Hat.svg)
 
 All of the pieces to assemble a [FluxEngine](http://cowlark.com/fluxengine/)
 
