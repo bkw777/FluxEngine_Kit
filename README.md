@@ -7,7 +7,7 @@
 
 All of the pieces to assemble a [FluxEngine](http://cowlark.com/fluxengine/)
 
-I am not the creator of FluxEngine, this is just an adapter PCB, eventually a 3d-printable case, and some directions and links to parts to build an FluxEngine.
+I am not the creator of FluxEngine, this is just an adapter PCB, eventually a 3d-printable case, and some directions and links to parts to build a FluxEngine.
 
 The PCB is based on the [user-submitted PCB](http://cowlark.com/fluxengine/doc/building.html#if-you-want-to-use-a-pcb) on the FluxEngine site.
 
