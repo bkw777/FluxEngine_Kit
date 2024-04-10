@@ -17,6 +17,10 @@ Differences:
 * 34-pin 3,4,5,6 NC
 * 34-pin physically remove pin 5
 
+This PCB isn't needed for most uses. All you really need is just the 34-pin connector. Pull pin 5 out, solder the even row of the connector directly to J1 pins 8-24 on the fpga board, solder a bare wire along the entire row of even pins and to J1 pin 25.
+
+This pcb is just to supply a 50 pin connector for 8-inch drives as well as the normal 34-pin connector for 3.5 and 5.25 inch drives.
+
 ## PARTS
 [DigiKey BOM with all parts](https://www.digikey.com/short/zb23f8pq)  
 BOM includes the fpga board and a usb cable.
