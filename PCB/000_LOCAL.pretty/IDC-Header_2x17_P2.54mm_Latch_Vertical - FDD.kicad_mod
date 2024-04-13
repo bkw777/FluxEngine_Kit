@@ -630,7 +630,7 @@
 		(remove_unused_layers no)
 		(uuid "56f00772-9a4b-4858-99a8-4ea1e44c6581")
 	)
-	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/86130342114345E1LF--3DModel-STEP-554624.STEP"
+	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/86130342114345E1LF.step"
 		(offset
 			(xyz 1.7907 -20.32 0)
 		)
@@ -639,6 +639,29 @@
 		)
 		(rotate
 			(xyz -90 0 90)
+		)
+	)
+	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/33pins_fdd.step"
+		(offset
+			(xyz 0 0 5.08)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/IDC-Header_2x17_P2.54mm_Vertical.wrl"
+		(hide yes)
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
 		)
 	)
 )

@@ -778,7 +778,7 @@
 			(xyz 0 0 0)
 		)
 	)
-	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/86130502114345E1LF--3DModel-STEP-554624.STEP"
+	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/86130502114345E1LF.step"
 		(offset
 			(xyz 1.7907 -30.48 0)
 		)
@@ -787,6 +787,17 @@
 		)
 		(rotate
 			(xyz -90 0 90)
+		)
+	)
+	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/50pins.step"
+		(offset
+			(xyz 0 0 5.08)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
 		)
 	)
 )

@@ -1,13 +1,17 @@
 # FluxEngine Kit
 
 ![](PCB/out/FluxEngine_Hat.jpg)
+![](PCB/out/FluxEngine_Hat_2.jpg)
+![](PCB/out/FluxEngine_Hat_3.jpg)
+![](PCB/out/FluxEngine_Hat_4.jpg)
+![](PCB/out/FluxEngine_Hat_5.jpg)
 ![](PCB/out/FluxEngine_Hat.top.jpg)
 ![](PCB/out/FluxEngine_Hat.bottom.jpg)
 ![](PCB/out/FluxEngine_Hat.svg)
 
 All of the pieces to assemble a [FluxEngine](http://cowlark.com/fluxengine/)
 
-I am not the creator of FluxEngine, this is just an adapter PCB, eventually a 3d-printable case, and some directions and links to parts to build a FluxEngine.
+I am not the creator of FluxEngine, this is just an adapter PCB to provide 34 and 50 pin connectors, and eventually maybe a 3d-printable case, and some directions and links to parts.
 
 The PCB is based on the [user-submitted PCB](http://cowlark.com/fluxengine/doc/building.html#if-you-want-to-use-a-pcb) on the FluxEngine site.
 
@@ -16,23 +20,22 @@ Differences:
 * J1 9,10 NC
 * 34-pin 3,4,5,6 NC
 * 34-pin physically remove pin 5
+* flipped over so the fpga board can be soldered close to the pcb and yet still be able to use the ucb port
 
-This PCB isn't needed for most uses. All you really need is just the 34-pin connector. Pull pin 5 out, solder the even row of the connector directly to J1 pins 8-24 on the fpga board, solder a bare wire along the entire row of even pins and to J1 pin 25.
+This PCB isn't needed for the most common use-case.  
+The most practical way to assemble a FluxEngine is to just solder the even row of the 34-pin connector directly to J1 pins 8-24 on the fpga board.  
+Before soldering, pull out pin 5 and discard it. After soldering, solder a 3 inch long bare wire to J1 pin 25 labelled GND, then lay that along the odd row pins of the connector and solder the wire to all the odd row pins.  
+That's it. That's a complete FluxEngine ready to go for 99% of use cases with typical 360k, 720k, 1.2M, 1.44M, 3.5 and 5.25 inch floppy drives.
 
-This pcb is just to supply a 50 pin connector for 8-inch drives as well as the normal 34-pin connector for 3.5 and 5.25 inch drives.
+This PCB is just to supply a 50 pin connector for 8-inch drives as well as the normal 34-pin connector for 3.5 and 5.25 inch drives.
+
+It also provides a convenient way to make the floppy connectors removable with pin headers and sockets, so you can still use the fpga board for other things.  
+Just solder male pins to the bottom of the fpga board the same way you would any other mcu dev board so that you can plug it in to a bread board with the usb and button facing up.  
+And solder pin sockets to the Hat on the side opposite the  connectors.  
+Now the fpga board can be moved between a breadboard or the Hat at will.  
 
 ## PARTS
-[DigiKey BOM with all parts](https://www.digikey.com/short/zb23f8pq)  
-BOM includes the fpga board and a usb cable.
-<!--
-1 x [CY8CKIT-059 fpga dev board](https://www.digikey.com/en/products/detail/infineon-technologies/CY8CKIT-059/5184557)  
-1 x [34-pin male latching box header](https://www.digikey.com/en/products/detail/amphenol-cs-fci/86130342114345E1LF/5201658)  
-1 x [50-pin male latching box header](https://www.digikey.com/en/products/detail/amphenol-cs-fci/86130502114345E1LF/5201692)  
-2 x [1x40 male pin header](https://www.digikey.com/en/products/detail/sullins-connector-solutions/PRPC040SAAN-RC/2775214)  
-2 x [1x40 female pin header](https://www.digikey.com/en/products/detail/chip-quik-inc/HDR100IMP40F-G-V-TH/5978200)  
-1 x [male-male dupont jumper wires](https://www.digikey.com/en/products/detail/sparkfun-electronics/PRT-12795/5993860)  
-1 x [microusb cable](https://www.digikey.com/en/products/detail/tripp-lite/U050-006-COIL/6204993)  
--->
+[BOM from DigiKey](https://www.digikey.com/short/qpw0zfh8)  
 
 If you don't already have a convenient way to power the floppy drive(s):  
 [Molex power supply](https://amazon.com/dp/B000MGG6SC)  
@@ -40,24 +43,7 @@ If you don't already have a convenient way to power the floppy drive(s):
 [Molex to Molex splitter](https://amazon.com/dp/B00007JO36)  
 [Floppy drive cable](https://amazon.com/dp/B07KDJTMGP)  
 
-## Directions
+## Enclosure
 
-Pull pin 5 out of the 34-pin connector and discard it.
-
-Cut the 40-pin male & female pin headers down to 26 pins.  
-For the female, cut in the middle of the 27th pin and then sand or file the end smooth.
-
-Solder the 34-pin and 50-pin connectors to the top side.
-
-Solder the 26-pin male headers to the bottom side.
-
-Snap the programmer board off of the fpga board and sand the rough edge of both the programmer and the fpga board.
-
-Solder the 26-pin female headers to the top side of the fpga board.
-
-Cut 2 5-pin pieces from the leftover female pin headers.
-
-Solder the 5-pin female strips on the top side of the programmer and the fpga board where the programmer was broken off.
-
-Peel a 5-wire group off of the male-male ribbon cable. This is your programming cable for writing new firmware to the fpga board.
-
+Not started yet.  
+It doesn't really need much but it would be nice to prevent shorts from exposed pins.
