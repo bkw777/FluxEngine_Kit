@@ -4,7 +4,6 @@
 ![](PCB/out/FluxEngine_Hat_2.jpg)
 ![](PCB/out/FluxEngine_Hat_3.jpg)
 ![](PCB/out/FluxEngine_Hat_4.jpg)
-![](PCB/out/FluxEngine_Hat_5.jpg)
 ![](PCB/out/FluxEngine_Hat.top.jpg)
 ![](PCB/out/FluxEngine_Hat.bottom.jpg)
 ![](PCB/out/FluxEngine_Hat.svg)
@@ -17,10 +16,11 @@ The PCB is based on the [user-submitted PCB](http://cowlark.com/fluxengine/doc/b
 
 Differences:  
 * Re-drawn in KiCAD instead of Eagle.
-* J1 9,10 NC
-* 34-pin 3,4,5,6 NC
-* 34-pin physically remove pin 5
-* flipped over so the fpga board can be soldered close to the pcb and yet still be able to use the ucb port
+* no connect on the fpga board TX & RX pins (J1 9 & 10)
+* no connect on 34-pin 3,4,5,6
+* physically remove pin 5 from the 34-pin 
+* flipped over so the fpga board can be soldered close to the pcb and yet still be able to use the usb port
+
 
 This PCB isn't needed for the most common use-case.  
 The most practical way to assemble a FluxEngine is to just solder the even row of the 34-pin connector directly to J1 pins 8-24 on the fpga board.  
@@ -35,7 +35,7 @@ And solder pin sockets to the Hat on the side opposite the  connectors.
 Now the fpga board can be moved between a breadboard or the Hat at will.  
 
 ## PARTS
-[BOM from DigiKey](https://www.digikey.com/short/qpw0zfh8)  
+[BOM from DigiKey](https://www.digikey.com/short/r214w4b0)  
 
 If you don't already have a convenient way to power the floppy drive(s):  
 [Molex power supply](https://amazon.com/dp/B000MGG6SC)  
@@ -45,5 +45,4 @@ If you don't already have a convenient way to power the floppy drive(s):
 
 ## Enclosure
 
-Not started yet.  
-It doesn't really need much but it would be nice to prevent shorts from exposed pins.
+There is a simple snap on cover in the CASE directory. Untested.

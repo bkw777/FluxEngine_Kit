@@ -444,7 +444,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "FluxEngine_IO.kicad_pro",
+    "filename": "FluxEngine_Hat.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -482,7 +482,7 @@
       "plot": "GERBER_${TITLE}_${REVISION}",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../CASE/FluxEngine_Hat.step",
       "svg": "",
       "vrml": ""
     },
