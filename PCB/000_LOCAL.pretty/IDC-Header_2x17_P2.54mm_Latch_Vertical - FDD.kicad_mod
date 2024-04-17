@@ -642,7 +642,7 @@
 			(xyz 0 0 0)
 		)
 	)
-	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/86130342114345E1LF_FDD_cut.step"
+	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/86130342114345E1LF_fdd.step"
 		(offset
 			(xyz 0 0 0)
 		)
