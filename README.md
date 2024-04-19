@@ -40,7 +40,7 @@ There is a printable [cover](CASE/out/FluxEngine_Case.stl) in the CASE directory
 
 The cover prints easily with any common FDM printer with PLA.
 
-The PCBWAY link above provides both the PCB and the cover if you want. The buy link to the right is for the pcb, to get the cover scroll down the page to the FluxENgine_Case.stl file and it also has a buy link.
+The PCBWAY link above provides both the PCB and the cover if you want. The buy link to the right is for the pcb, to get the cover scroll down the page to the FluxEngine_Case.stl file and it also has a buy link.
 
 You can also get both the pcb and the cover at the same time on the same order from Elecrow for about $13 including shipping.  
 Get the gerber.zip and STL from [releases](../../releases).
