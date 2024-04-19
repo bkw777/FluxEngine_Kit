@@ -40,5 +40,5 @@ There is a printable [cover](CASE/out/FluxEngine_Case.stl) in the CASE directory
 The cover prints easily with any common FDM printer with PLA.
 
 But you can also get both the pcb and the cover at the same time on the same order from Elecrow for about $13 including shipping.  
-Get the gerber.zip and STL from [releases](../releases).
+Get the gerber.zip and STL from [releases](../../releases).
 Choose high strength nylon for the 3d printing to get a strong black part.
