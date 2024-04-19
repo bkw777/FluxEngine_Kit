@@ -22,6 +22,7 @@ You could skip the pcb and the printed cover, use the same BOM link below and re
 
 ## PARTS
 [BOM from DigiKey](https://www.digikey.com/short/r214w4b0)  
+[PCB and Cover from PCBWAY](https://www.pcbway.com/project/shareproject/FluxEngine_Hat_e3000eb5.html)
 
 If you don't already have a convenient way to power the floppy drive(s) externally:  
 [Molex power supply](https://amazon.com/dp/B000MGG6SC)  
@@ -39,6 +40,8 @@ There is a printable [cover](CASE/out/FluxEngine_Case.stl) in the CASE directory
 
 The cover prints easily with any common FDM printer with PLA.
 
-But you can also get both the pcb and the cover at the same time on the same order from Elecrow for about $13 including shipping.  
+The PCBWAY link above provides both the PCB and the cover if you want. The buy link to the right is for the pcb, to get the cover scroll down the page to the FluxENgine_Case.stl file and it also has a buy link.
+
+You can also get both the pcb and the cover at the same time on the same order from Elecrow for about $13 including shipping.  
 Get the gerber.zip and STL from [releases](../../releases).
 Choose high strength nylon for the 3d printing to get a strong black part.
