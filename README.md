@@ -31,11 +31,9 @@ If you don't already have a convenient way to power the floppy drive(s) external
 
 ## Enclosure
 
-There is a printable cover in the CASE directory.  
-It's designed in OpenSCAD.
+There is a printable [cover](CASE/out/FluxEngine_Case.stl) in the CASE directory, designed in OpenSCAD.
 
 ![](CASE/out/FluxEngine_Case.jpg)
-![](CASE/out/FluxEngine_Case.stl)
 
 ## Fabrication
 
