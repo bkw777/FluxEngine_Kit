@@ -1,6 +1,6 @@
 # FluxEngine Kit
 
-![](PCB/out/FluxEngine_Hat.cvr.jpg)
+![](PCB/out/FluxEngine_Hat.cvr.1.jpg)
 ![](PCB/out/FluxEngine_Hat.cvr.2.jpg)
 ![](PCB/out/FluxEngine_Hat.jpg)
 ![](PCB/out/FluxEngine_Hat.2.jpg)
