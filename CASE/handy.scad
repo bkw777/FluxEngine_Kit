@@ -15,7 +15,7 @@
 
    rounded_cube(w=60,d=40,h=20,rh=2,rv=1,t=0)
 
-     draws a cube with rounded corners
+     cube with rounded corners, optionally hollow
 
      w = width
      d = depth
@@ -81,7 +81,7 @@ module rounded_cube(w=60,d=40,h=20,rh=2,rv=1,t=0) {
   else _hbrc(w=w,d=d,h=h,rh=rh,rv=rv);
 }
 
-module _hbrc(w=60,d=40,h=20,rh=2,rv=1) { // rounded cube
+module _hbrc(w=60,d=40,h=20,rh=2,rv=1) {
  hull() {
   mirror_copy([0,0,1])
    mirror_copy([0,1,0])
@@ -101,6 +101,17 @@ module fillet_polar(o=false,R=1,r=1,A=90,a=90,as=0) {
 module fillet_linear(o=false,l=1,r=1,a=90) {
  linear_extrude(height=l,center=false)
   _hbf(o,r,a);
+}
+
+// D or bathtub shaped cube with 2 corners rounded
+module D (w=10,d=10,h=1,r=2) {
+  hull() {
+   translate([0,r/2,0])
+    cube([w,d-r,h],center=true);
+   mirror_copy([1,0,0])
+    translate([w/2-r,-d/2+r,0])
+     cylinder(h=h,r=r,center=true);
+  }
 }
 
 module _hbf(o=false,r=1,a=90) { // 2d fillet
