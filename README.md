@@ -37,7 +37,7 @@ If you don't already have a convenient way to power the floppy drive(s) external
 There are two styles of printable cover in the CASE directory.
 
 [Fancy Cover](CASE/out/FluxEngine_FancyCover.stl)
-![](CASE/out/FancyCover.jpg)
+![](CASE/out/FancyCover.png)
 
 [Simple Cover](CASE/out/FluxEngine_SimpleCover.stl)
 ![](CASE/out/SimpleCover.jpg)
