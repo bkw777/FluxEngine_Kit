@@ -6,6 +6,8 @@
 ![](PCB/out/FluxEngine_Hat.4.jpg)
 ![](PCB/out/FluxEngine_Hat.5.jpg)
 ![](PCB/out/FluxEngine_Hat.6.jpg)
+![](PCB/out/FluxEngine_SimpleCover_front.jpg)
+![](PCB/out/FluxEngine_SimpleCover_back.jpg)
 ![](PCB/out/FluxEngine_Hat.top.jpg)
 ![](PCB/out/FluxEngine_Hat.bottom.jpg)
 ![](PCB/out/FluxEngine_Hat.svg)
@@ -32,9 +34,13 @@ If you don't already have a convenient way to power the floppy drive(s) external
 
 ## Enclosure
 
-There is a printable [cover](CASE/out/FluxEngine_Case.stl) in the CASE directory, designed in OpenSCAD.
+There are two styles of printable cover in the CASE directory.
 
-![](CASE/out/FluxEngine_Case.jpg)
+[Fancy Cover](CASE/out/FluxEngine_FancyCover.stl)
+![](CASE/out/FluxEngine_FancyCover.jpg)
+
+[Simple Cover](CASE/out/FluxEngine_SimpleCover.stl)
+![](CASE/out/FluxEngine_SimpleCover.jpg)
 
 ## Fabrication
 

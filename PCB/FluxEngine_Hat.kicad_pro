@@ -482,7 +482,7 @@
       "plot": "GERBER_${TITLE}_${REVISION}",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "../CASE/FluxEngine_Hat.step",
+      "step": "../CASE/PCBs.step",
       "svg": "",
       "vrml": ""
     },
