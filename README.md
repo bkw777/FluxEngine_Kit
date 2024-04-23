@@ -34,15 +34,18 @@ If you don't already have a convenient way to power the floppy drive(s) external
 
 ## Enclosure
 
-There are two styles of printable cover in the CASE directory.
+There are several versions of printable cover in the CASE directory.
 
 [FluxEngine_FancyCover.stl](CASE/out/FluxEngine_FancyCover.stl)
 
 ![](CASE/out/FancyCover.jpg)
 
-[FluxEngine_SimpleCover.stl](CASE/out/FluxEngine_SimpleCover.stl)
+[FluxEngine_SimpleCover.stl](CASE/out/FluxEngine_SimpleCover.stl) - soldered and flush-cut pins  
+[FluxEngine_SimpleCover_solderless.stl](CASE/out/FluxEngine_SimpleCover_solderless.stl) - dry-fit full length pins   
+[FluxEngine_SimpleCover_sockets.stl](CASE/out/FluxEngine_SimpleCover_sockets.stl) - square pin sockets  
 
-![](CASE/out/SimpleCover.jpg)
+![](CASE/out/SimpleCover.jpg)  
+![](PCB/out/SimpleCover_styles.jpg)
 
 ## Fabrication
 

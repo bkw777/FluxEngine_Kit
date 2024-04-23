@@ -3,8 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "8.0")
 	(layer "F.Cu")
-	(descr "Through hole IDC header, 2x17, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows latches, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0")
-	(tags "Through hole vertical IDC header THT 2x17 2.54mm double row")
+	(descr "Through hole IDC header, 2x17, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows latches, pins 3 & 5 removed")
+	(tags "fdc floppy pc34")
 	(property "Reference" "REF**"
 		(at 1.27 -11.97 0)
 		(layer "F.SilkS")
@@ -382,14 +382,6 @@
 		(remove_unused_layers no)
 		(uuid "60356227-7e0a-4d32-bb83-8bb21c62f510")
 	)
-	(pad "3" thru_hole circle
-		(at 0 2.54)
-		(size 1.6 1.6)
-		(drill 0.95)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "f35c8635-57ba-4be4-8a9f-7449ac9c8ade")
-	)
 	(pad "4" thru_hole circle
 		(at 2.54 2.54)
 		(size 1.6 1.6)
@@ -642,7 +634,7 @@
 			(xyz 0 0 0)
 		)
 	)
-	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/86130342114345E1LF_fdd.step"
+	(model "${KIPRJMOD}/000_LOCAL.pretty/3dmodels/86130342114345E1LF_fdd_cut.step"
 		(offset
 			(xyz 0 0 0)
 		)

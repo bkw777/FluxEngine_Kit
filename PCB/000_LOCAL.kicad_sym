@@ -3620,7 +3620,7 @@
 	)
 	(symbol "FDD_IBMPC_host"
 		(pin_names
-			(offset 1.27)
+			(offset 0.635)
 		)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3634,7 +3634,7 @@
 			)
 		)
 		(property "Value" "FDD_IBMPC_host"
-			(at 0 -23.114 0)
+			(at 0 -24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3659,7 +3659,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, double row, 02x17, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "34-pin IBM PC floppy drive interface, host-side, pins 3 & 5 removed"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3668,7 +3668,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_keywords" "connector"
+		(property "ki_keywords" "pc fdc floppy"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3688,8 +3688,8 @@
 		)
 		(symbol "FDD_IBMPC_host_1_1"
 			(rectangle
-				(start -5.08 22.86)
-				(end 5.08 -20.32)
+				(start -7.62 22.86)
+				(end 7.62 -22.86)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -3698,8 +3698,8 @@
 					(type background)
 				)
 			)
-			(pin power_out line
-				(at 10.16 -17.78 180)
+			(pin passive line
+				(at -12.7 20.32 0)
 				(length 5.08)
 				(name "GND"
 					(effects
@@ -3716,8 +3716,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 15.24 180)
+			(pin passive line
+				(at 12.7 10.16 180)
 				(length 5.08)
 				(name "~{MOTEA}"
 					(effects
@@ -3735,8 +3735,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 7.62 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -3752,8 +3752,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 12.7 180)
+			(pin passive line
+				(at 12.7 7.62 180)
 				(length 5.08)
 				(name "~{DRVSB}"
 					(effects
@@ -3771,8 +3771,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 5.08 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -3788,8 +3788,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 10.16 180)
+			(pin passive line
+				(at 12.7 5.08 180)
 				(length 5.08)
 				(name "~{DRVSA}"
 					(effects
@@ -3807,8 +3807,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 2.54 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -3824,8 +3824,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 7.62 180)
+			(pin passive line
+				(at 12.7 2.54 180)
 				(length 5.08)
 				(name "~{MOTEB}"
 					(effects
@@ -3843,8 +3843,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 0 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -3860,8 +3860,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at 10.16 5.08 180)
+			(pin passive line
+				(at 12.7 0 180)
 				(length 5.08)
 				(name "DIR"
 					(effects
@@ -3879,8 +3879,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 -2.54 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -3896,8 +3896,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 20.32 180)
+			(pin passive line
+				(at 12.7 20.32 180)
 				(length 5.08)
 				(name "~{REDWC}"
 					(effects
@@ -3914,8 +3914,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 2.54 180)
+			(pin passive line
+				(at 12.7 -2.54 180)
 				(length 5.08)
 				(name "~{STEP}"
 					(effects
@@ -3933,8 +3933,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 -5.08 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -3950,8 +3950,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 0 180)
+			(pin passive line
+				(at 12.7 -5.08 180)
 				(length 5.08)
 				(name "~{WDATA}"
 					(effects
@@ -3969,8 +3969,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 -7.62 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -3986,8 +3986,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 -2.54 180)
+			(pin passive line
+				(at 12.7 -7.62 180)
 				(length 5.08)
 				(name "~{WGATE}"
 					(effects
@@ -4005,8 +4005,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 -10.16 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4022,8 +4022,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 -5.08 180)
+			(pin passive line
+				(at 12.7 -10.16 180)
 				(length 5.08)
 				(name "~{TRK0}"
 					(effects
@@ -4041,8 +4041,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 -12.7 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4058,8 +4058,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 -7.62 180)
+			(pin passive line
+				(at 12.7 -12.7 180)
 				(length 5.08)
 				(name "~{WPT}"
 					(effects
@@ -4077,8 +4077,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 -15.24 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4094,26 +4094,8 @@
 					)
 				)
 			)
-			(pin no_connect non_logic
-				(at -5.08 20.32 0)
-				(length 0) hide
-				(name "RSVD"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input input_low
-				(at 10.16 -10.16 180)
+			(pin passive line
+				(at 12.7 -15.24 180)
 				(length 5.08)
 				(name "~{RDATA}"
 					(effects
@@ -4131,8 +4113,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 -17.78 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4148,8 +4130,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at 10.16 -12.7 180)
+			(pin passive line
+				(at 12.7 -17.78 180)
 				(length 5.08)
 				(name "SIDE"
 					(effects
@@ -4167,8 +4149,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 -20.32 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4184,8 +4166,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 -15.24 180)
+			(pin passive line
+				(at 12.7 -20.32 180)
 				(length 5.08)
 				(name "~{DSKCHG}"
 					(effects
@@ -4202,10 +4184,10 @@
 					)
 				)
 			)
-			(pin no_connect non_logic
-				(at -5.08 17.78 0)
-				(length 0) hide
-				(name "RSVD"
+			(pin passive line
+				(at 12.7 17.78 180)
+				(length 5.08)
+				(name "rsvd"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4220,10 +4202,10 @@
 					)
 				)
 			)
-			(pin no_connect non_logic
-				(at -5.08 15.24 0)
-				(length 0) hide
-				(name "RSVD"
+			(pin passive line
+				(at 12.7 15.24 180)
+				(length 5.08)
+				(name "rsvd"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4239,8 +4221,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 12.7 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4256,8 +4238,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 17.78 180)
+			(pin passive line
+				(at 12.7 12.7 180)
 				(length 5.08)
 				(name "~{INDEX}"
 					(effects
@@ -4275,8 +4257,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -17.78 180)
-				(length 5.08) hide
+				(at -12.7 10.16 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4296,7 +4278,7 @@
 	)
 	(symbol "FDD_SA800_host"
 		(pin_names
-			(offset 1.27)
+			(offset 0.635)
 		)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4310,7 +4292,7 @@
 			)
 		)
 		(property "Value" "FDD_SA800_host"
-			(at 0 -31.75 0)
+			(at 0 -37.084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4335,7 +4317,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, double row, 02x17, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Shugart 50-pin floppy drive interface, host side"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4344,7 +4326,7 @@
 				(hide yes)
 			)
 		)
-		(property "ki_keywords" "connector"
+		(property "ki_keywords" "connector floppy fdc shugart 2x25 50pin"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4364,8 +4346,8 @@
 		)
 		(symbol "FDD_SA800_host_1_1"
 			(rectangle
-				(start -5.08 30.48)
-				(end 5.08 -30.48)
+				(start -7.62 30.48)
+				(end 7.62 -35.56)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -4374,8 +4356,8 @@
 					(type background)
 				)
 			)
-			(pin power_out line
-				(at 10.16 -27.94 180)
+			(pin passive line
+				(at -12.7 27.94 0)
 				(length 5.08)
 				(name "GND"
 					(effects
@@ -4392,8 +4374,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 25.4 180)
+			(pin passive line
+				(at 12.7 17.78 180)
 				(length 5.08)
 				(name "~{FD2S}"
 					(effects
@@ -4411,8 +4393,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 15.24 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4428,8 +4410,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 22.86 180)
+			(pin passive line
+				(at 12.7 15.24 180)
 				(length 5.08)
 				(name "~{DSKCHG}"
 					(effects
@@ -4447,8 +4429,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 12.7 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4464,8 +4446,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at 10.16 20.32 180)
+			(pin passive line
+				(at 12.7 12.7 180)
 				(length 5.08)
 				(name "SIDE"
 					(effects
@@ -4483,8 +4465,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 10.16 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4500,8 +4482,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 17.78 180)
+			(pin passive line
+				(at 12.7 10.16 180)
 				(length 5.08)
 				(name "~{INUSE}"
 					(effects
@@ -4519,8 +4501,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 7.62 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4536,8 +4518,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 15.24 180)
+			(pin passive line
+				(at 12.7 7.62 180)
 				(length 5.08)
 				(name "~{HLOAD}"
 					(effects
@@ -4555,8 +4537,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 5.08 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4572,8 +4554,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 27.94 180)
+			(pin passive line
+				(at 12.7 27.94 180)
 				(length 5.08)
 				(name "~{TG43}"
 					(effects
@@ -4590,8 +4572,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 12.7 180)
+			(pin passive line
+				(at 12.7 5.08 180)
 				(length 5.08)
 				(name "~{INDEX}"
 					(effects
@@ -4609,8 +4591,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 2.54 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4626,8 +4608,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 10.16 180)
+			(pin passive line
+				(at 12.7 2.54 180)
 				(length 5.08)
 				(name "~{READY}"
 					(effects
@@ -4645,8 +4627,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 0 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4662,8 +4644,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 7.62 180)
+			(pin passive line
+				(at 12.7 0 180)
 				(length 5.08)
 				(name "~{SECTOR}"
 					(effects
@@ -4681,8 +4663,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -2.54 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4698,8 +4680,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 5.08 180)
+			(pin passive line
+				(at 12.7 -2.54 180)
 				(length 5.08)
 				(name "~{DS1}"
 					(effects
@@ -4717,8 +4699,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -5.08 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4734,8 +4716,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 2.54 180)
+			(pin passive line
+				(at 12.7 -5.08 180)
 				(length 5.08)
 				(name "~{DS2}"
 					(effects
@@ -4753,8 +4735,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -7.62 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4771,8 +4753,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 25.4 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4788,8 +4770,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 0 180)
+			(pin passive line
+				(at 12.7 -7.62 180)
 				(length 5.08)
 				(name "~{DS3}"
 					(effects
@@ -4807,8 +4789,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -10.16 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4824,8 +4806,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 -2.54 180)
+			(pin passive line
+				(at 12.7 -10.16 180)
 				(length 5.08)
 				(name "~{DS4}"
 					(effects
@@ -4843,8 +4825,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -12.7 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4860,8 +4842,8 @@
 					)
 				)
 			)
-			(pin output line
-				(at 10.16 -5.08 180)
+			(pin passive line
+				(at 12.7 -12.7 180)
 				(length 5.08)
 				(name "DIR"
 					(effects
@@ -4879,8 +4861,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -15.24 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4896,8 +4878,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 -7.62 180)
+			(pin passive line
+				(at 12.7 -15.24 180)
 				(length 5.08)
 				(name "~{STEP}"
 					(effects
@@ -4915,8 +4897,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -17.78 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4932,8 +4914,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 -10.16 180)
+			(pin passive line
+				(at 12.7 -17.78 180)
 				(length 5.08)
 				(name "~{WDATA}"
 					(effects
@@ -4951,8 +4933,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -20.32 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -4968,10 +4950,10 @@
 					)
 				)
 			)
-			(pin no_connect non_logic
-				(at -5.08 27.94 0)
-				(length 0) hide
-				(name "RSV5"
+			(pin passive line
+				(at 12.7 25.4 180)
+				(length 5.08)
+				(name "rsvd"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4986,8 +4968,8 @@
 					)
 				)
 			)
-			(pin output output_low
-				(at 10.16 -12.7 180)
+			(pin passive line
+				(at 12.7 -20.32 180)
 				(length 5.08)
 				(name "~{WGATE}"
 					(effects
@@ -5005,8 +4987,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -22.86 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -5022,8 +5004,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 -15.24 180)
+			(pin passive line
+				(at 12.7 -22.86 180)
 				(length 5.08)
 				(name "~{TRK0}"
 					(effects
@@ -5041,8 +5023,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -25.4 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -5058,8 +5040,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 -17.78 180)
+			(pin passive line
+				(at 12.7 -25.4 180)
 				(length 5.08)
 				(name "~{WPT}"
 					(effects
@@ -5077,8 +5059,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -27.94 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -5094,8 +5076,8 @@
 					)
 				)
 			)
-			(pin input input_low
-				(at 10.16 -20.32 180)
+			(pin passive line
+				(at 12.7 -27.94 180)
 				(length 5.08)
 				(name "~{RDATA}"
 					(effects
@@ -5113,8 +5095,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -30.48 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -5130,8 +5112,8 @@
 					)
 				)
 			)
-			(pin input line
-				(at 10.16 -22.86 180)
+			(pin passive line
+				(at 12.7 -30.48 180)
 				(length 5.08)
 				(name "SEPDATA"
 					(effects
@@ -5149,8 +5131,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 -33.02 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -5167,8 +5149,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 22.86 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -5184,8 +5166,8 @@
 					)
 				)
 			)
-			(pin input line
-				(at 10.16 -25.4 180)
+			(pin passive line
+				(at 12.7 -33.02 180)
 				(length 5.08)
 				(name "SEPCLK"
 					(effects
@@ -5202,10 +5184,10 @@
 					)
 				)
 			)
-			(pin no_connect non_logic
-				(at -5.08 25.4 0)
-				(length 0) hide
-				(name "RSV6"
+			(pin passive line
+				(at 12.7 22.86 180)
+				(length 5.08)
+				(name "rsvd"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5221,8 +5203,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 20.32 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
@@ -5238,10 +5220,10 @@
 					)
 				)
 			)
-			(pin no_connect non_logic
-				(at -5.08 22.86 0)
-				(length 0) hide
-				(name "RSV7"
+			(pin passive line
+				(at 12.7 20.32 180)
+				(length 5.08)
+				(name "rsvd"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5257,8 +5239,8 @@
 				)
 			)
 			(pin passive line
-				(at 10.16 -27.94 180)
-				(length 5.08) hide
+				(at -12.7 17.78 0)
+				(length 5.08)
 				(name "GND"
 					(effects
 						(font
