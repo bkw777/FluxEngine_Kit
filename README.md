@@ -68,8 +68,8 @@ Connects either /DSKCHG or /READY output from the drive to the /DSKCHG input on 
 
 Install jumper on DC by default.
 
-### DLK / HLD
-Connects the MOTEB/DS4 (motor-on) output from the host to either the DOOR-LOCK/IN-USE or HEAD-LOAD input on the drive, or neither, or both.
+# DLK / HLD
+Connects the /MOTA (motor-A-on) output from the host to either the /DOOR-LOCK aka /IN-USE or /HEAD-LOAD input on the drive, or neither, or both.
 
 Usually not needed, but if needed, you may need one or the other or both.
 
