@@ -4794,8 +4794,8 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "CDC9406-p2"
-		(at 103.805001 106.959999 0)
+	(gr_text "8 inch\nCDC 9406\ncfg 2"
+		(at 107.315001 95.249999 0)
 		(layer "F.SilkS")
 		(uuid "2dce8c0a-717f-4cbf-bfe0-b24c9ecfe52d")
 		(effects
@@ -4804,7 +4804,20 @@
 				(thickness 0.2032)
 				(bold yes)
 			)
-			(justify left)
+			(justify bottom)
+		)
+	)
+	(gr_text "3.5 inch\n5.25 inch"
+		(at 121.920001 92.074999 90)
+		(layer "F.SilkS")
+		(uuid "36950995-7f49-4cb3-8c04-ee937169fb24")
+		(effects
+			(font
+				(size 1.016 1.016)
+				(thickness 0.2032)
+				(bold yes)
+			)
+			(justify bottom)
 		)
 	)
 	(via

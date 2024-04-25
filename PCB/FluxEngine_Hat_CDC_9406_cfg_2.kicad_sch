@@ -4290,7 +4290,7 @@
 			(uuid "0768af6f-5d49-4a78-ab0a-97571a321df1")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_9406_type_2"
+			(project "FluxEngine_Hat_CDC_9406_cfg_2"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "P2")
 					(unit 1)
@@ -4357,7 +4357,7 @@
 			(uuid "bdf9e306-af02-4ca9-adcb-1309b3e2be10")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_9406_type_2"
+			(project "FluxEngine_Hat_CDC_9406_cfg_2"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR06")
 					(unit 1)
@@ -4575,7 +4575,7 @@
 			(uuid "e5e87bb8-f81b-4a29-9c59-3d013fa62908")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_9406_type_2"
+			(project "FluxEngine_Hat_CDC_9406_cfg_2"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "J1")
 					(unit 1)
@@ -4733,7 +4733,7 @@
 			(uuid "609a8ff9-8206-49ff-b9c0-83383b2342d0")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_9406_type_2"
+			(project "FluxEngine_Hat_CDC_9406_cfg_2"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "P1")
 					(unit 1)
@@ -4801,7 +4801,7 @@
 			(uuid "683c9388-0e95-4758-b676-9ec54a0c36e5")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_9406_type_2"
+			(project "FluxEngine_Hat_CDC_9406_cfg_2"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR08")
 					(unit 1)
@@ -4868,7 +4868,7 @@
 			(uuid "0d513456-986f-4ba9-8c4b-d51b589cd53c")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_9406_type_2"
+			(project "FluxEngine_Hat_CDC_9406_cfg_2"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR07")
 					(unit 1)
@@ -4935,7 +4935,7 @@
 			(uuid "c4e879d4-8771-4af3-a297-65fde0b33068")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_9406_type_2"
+			(project "FluxEngine_Hat_CDC_9406_cfg_2"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR02")
 					(unit 1)
@@ -5003,7 +5003,7 @@
 			(uuid "697e2831-7657-4ff7-a19d-44b9c758537e")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_9406_type_2"
+			(project "FluxEngine_Hat_CDC_9406_cfg_2"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR04")
 					(unit 1)
