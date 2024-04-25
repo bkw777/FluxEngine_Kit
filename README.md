@@ -12,6 +12,8 @@
 ![](PCB/out/FluxEngine_Hat.bottom.jpg)
 ![](PCB/out/FluxEngine_Hat.svg)
 
+These PCBs ARE NOT TESTED YET.
+
 This is an adapter PCB and printable snap cover to build a nice version of [FluxEngine](http://cowlark.com/fluxengine/)
 
 I am not the creator of FluxEngine itself, just this connector PCB and printable cover.
@@ -72,3 +74,15 @@ Connects the MOTEB/DS4 (motor-on) output from the host to either the DOOR-LOCK/I
 Usually not needed, but if needed, you may need one or the other or both.
 
 Don't short either position by default, but do stow two inactive jumpers.
+
+### Control Data / Magnetic Peripherals 8-inch drives
+CDC drives have several different pinouts and they are nothing like the Shugart SA800 pinout.  
+There are special hat versions just for CDC/MPI drives.  
+Currently there are 2 CDC hats for CDC 9406 drives.  
+On page 5-4 in the [CDC 9406 manual](PCB/datasheets/77614903AM_9406_Flexible_Disk_Description_Jun82.pdf) there are 4 columns showing 4 different drive pinouts. columns 2, 3, & 4 are all the same for all the pins that matter, and column 1 is very different.  
+
+* "FluxEngine_Hat for CDC 9406 cfg 1" is for column 1  
+* "FluxEngine_Hat for CDC 9406 cfg 2" is for columns 2, 3, & 4
+
+THESE ARE NOT TESTED YET  
+I have a BR8A8A aka 77618019 drive on the way. That will be a test of the "CDC 9406 cfg 2" hat.
