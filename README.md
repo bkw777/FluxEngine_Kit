@@ -76,18 +76,30 @@ Usually not needed, but if needed, you may need one or the other or both.
 Don't short either position by default, but do stow two inactive jumpers.
 
 # Control Data / Magnetic Peripherals 8-inch drives
-CDC drives have several different pinouts and they are nothing like the Shugart SA800 pinout.  
-There are special hat versions just for CDC/MPI drives.  
-Currently there are 2 CDC hats for CDC 9406 drives.  
-On page 5-4 in the [CDC 9406 manual](PCB/datasheets/77614903AM_9406_Flexible_Disk_Description_Jun82.pdf) there are 4 columns showing 4 different drive pinouts. columns 2, 3, & 4 are all the same for all the pins that matter, and column 1 is very different.  
 
-* "FluxEngine_Hat for CDC 9406 cfg 1" is for column 1  
-* "FluxEngine_Hat for CDC 9406 cfg 2" is for columns 2, 3, & 4
+CDC/MPI drives seem to have been pretty common, but have a totally different pinout than Shugart. They actually have several different pinouts and some are completely custom and incompatible, but one of the pinouts, with only a pin or 2 two different but no pins we care about, seems to be used by most models. So I'll call that pinout "CDC standard".
+
+The two tables below come from two CDC manuals covering many similar drive models.  
+Left: [CDC FDD FSM ('79)](PCB/datasheets/CDC_77834769_Y__FDD_FSM.pdf)  
+Right: [CDC 9406 FSM ('82)](PCB/datasheets/CDC_77614903_AM__9406_FSM.pdf)  
+
+![](PCB/datasheets/CDC_FDD_pinouts.png)
+
+There is a hat version for "CDC STD" which matches all the green highlighted drives, and (I'm guessing) probably covers most CDC/MPI drives.
+
+There is also a hat version for "CDC ALT1", the purple highlight, simply because at least that pinout has the necessary signals that it's possible.  
+I have no idea if those models are common, or if the power really needs to be on the data cable or if the drives still have a simple way to provide the DC power directly. The hat includes the power connections simply because it was possible without even increasing the size of the pcb. The drive draws less than 1.5A on either rail, and both the screw terminals and the traces are good for over 5A. So although I don't really *recommend* powering a drive that way if there is any other option, it should be fully safe to do so.
+
+One of the other pinouts, the 4th column on the left table, under 75892150, is almost identical to "ALT1" with the only differences being it has STEP_IN + STEP_OUT instead of STEP + DIRECTION, but using the same 2 pins, and there is no READY signal. So maybe those drives could eventually be supported also by the same ALT1 hat with only software or firmware changes. Worst case I could probably add a tiny bit of logic to the board (probably a few gates in a single 74xx series) to optionally convert the STEP signals. I don't know about the lack of READY though.
 
 THESE ARE NOT TESTED YET  
-I have a BR8A8A aka 77618019 drive on the way. That will be a test of the "CDC 9406 cfg 2" hat.
+I have a BR8A8A aka 77618019 drive on the way. That will be a test of the "CDC standard" hat.
 
-![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_1.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_1.svg)
-![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_2.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_2.svg)
+![](PCB/out/FluxEngine_Hat_CDC.svg)
+![](PCB/out/FluxEngine_Hat_CDC.top.jpg)
+![](PCB/out/FluxEngine_Hat_CDC.bottom.jpg)
+
+![](PCB/out/FluxEngine_Hat_CDC_alt1.svg)
+![](PCB/out/FluxEngine_Hat_CDC_alt1.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_alt1.top.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_alt1.bottom.jpg)
