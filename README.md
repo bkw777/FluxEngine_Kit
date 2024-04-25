@@ -68,14 +68,14 @@ Connects either /DSKCHG or /READY output from the drive to the /DSKCHG input on 
 
 Install jumper on DC by default.
 
-# DLK / HLD
+### DLK / HLD
 Connects the /MOTA (motor-A-on) output from the host to either the /DOOR-LOCK aka /IN-USE or /HEAD-LOAD input on the drive, or neither, or both.
 
 Usually not needed, but if needed, you may need one or the other or both.
 
 Don't short either position by default, but do stow two inactive jumpers.
 
-### Control Data / Magnetic Peripherals 8-inch drives
+# Control Data / Magnetic Peripherals 8-inch drives
 CDC drives have several different pinouts and they are nothing like the Shugart SA800 pinout.  
 There are special hat versions just for CDC/MPI drives.  
 Currently there are 2 CDC hats for CDC 9406 drives.  
