@@ -87,7 +87,7 @@ On page 5-4 in the [CDC 9406 manual](PCB/datasheets/77614903AM_9406_Flexible_Dis
 THESE ARE NOT TESTED YET  
 I have a BR8A8A aka 77618019 drive on the way. That will be a test of the "CDC 9406 cfg 2" hat.
 
-![](PCP/out/FluxEngine_Hat_CDC_9406_cfg_1.jpg)
-![](PCP/out/FluxEngine_Hat_CDC_9406_cfg_1.svg)
-![](PCP/out/FluxEngine_Hat_CDC_9406_cfg_2.jpg)
-![](PCP/out/FluxEngine_Hat_CDC_9406_cfg_2.svg)
+![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_1.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_1.svg)
+![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_2.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_2.svg)
