@@ -99,7 +99,32 @@ I have a BR8A8A aka 77618019 drive on the way. That will be a test of the "CDC s
 ![](PCB/out/FluxEngine_Hat_CDC.top.jpg)
 ![](PCB/out/FluxEngine_Hat_CDC.bottom.jpg)
 
-![](PCB/out/FluxEngine_Hat_CDC_alt1.svg)
-![](PCB/out/FluxEngine_Hat_CDC_alt1.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_alt1.top.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_alt1.bottom.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_ALT1.svg)
+![](PCB/out/FluxEngine_Hat_CDC_ALT1.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_ALT1.top.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_ALT1.bottom.jpg)
+The screw terminal can be anything that fits the 3.5mm pin pitch footprint.
+The renders show a vertical style which is ideal because it allows the printed cover to be installed without bending the wires, and the cover ends up covering up the exposed screw heads too.
+A pluggable/unpluggable style would be even better but for now just for reference here is a link to the exact type in the render:  
+[2-pin 3.5mm pitch top-entry screw terminal](https://www.digikey.com/en/products/detail/on-shore-technology-inc/OSTTF020161/614572)
+
+### More 8-inch info
+
+The AC & DC power connectors were the same on many drives, both Shugart compatible and CDC even though the CDC data bus pinout is totally different.
+
+These are the cable-side connector housings and female pins needed to make proper cables to connect to a drive.
+
+3-pin AC power:  
+Housing: [AMP/TE 1-480700-0](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1-480700-0/29339)  
+Female pins: [AMP/TE 350536-1](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/350536-1/287712)
+
+6-pin DC power:  
+Housing: [AMP/TE 1-480270-0](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1-480270-0/15668)  
+Female pins: [AMP/TE 61117-1](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/61117-1/290254)
+
+They do make dual-output power supplies that output both 5v and 24v, but it's actually cheaper to buy seperate supplies.  
+A typical drive draws about 1.0A-1.5A from either DC rails while working.  
+Here are a couple of supplies just for convenience & reference:  
+[5V 3A Meanwell](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-15-5/7706168)  
+[24V 3.2A Meanwell](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-15-5/7706168)
+

@@ -5,7 +5,7 @@
 	(uuid "72d4cbf5-bf28-4978-b5d4-f13155888c6e")
 	(paper "User" 298.45 217.322)
 	(title_block
-		(title "FluxEngine_Hat for PC and CDC/MPI")
+		(title "FluxEngine_Hat for PC and CDC")
 		(date "2024-04-25")
 		(rev "002")
 		(company "Brian K. White - b.kenyon.w@gmail.com")

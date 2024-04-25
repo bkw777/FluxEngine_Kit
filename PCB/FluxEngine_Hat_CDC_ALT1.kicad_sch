@@ -5,7 +5,7 @@
 	(uuid "72d4cbf5-bf28-4978-b5d4-f13155888c6e")
 	(paper "User" 298.45 217.322)
 	(title_block
-		(title "FluxEngine_Hat for PC and CDC/MPI alt1")
+		(title "FluxEngine_Hat for PC and CDC ALT1")
 		(date "2024-04-25")
 		(rev "002")
 		(company "Brian K. White - b.kenyon.w@gmail.com")
@@ -4490,7 +4490,7 @@
 			(uuid "3949448e-ade4-4508-89ad-def6ff6d0c75")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "J2")
 					(unit 1)
@@ -4557,7 +4557,7 @@
 			(uuid "06b97fad-ec9e-4ffa-81ea-37cee1bc477a")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR01")
 					(unit 1)
@@ -4627,7 +4627,7 @@
 			(uuid "5939e42f-e4d3-4bfc-8900-fb2b859402bd")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "J3")
 					(unit 1)
@@ -4694,7 +4694,7 @@
 			(uuid "342ca354-87c6-48e4-bdff-de139e481da8")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR03")
 					(unit 1)
@@ -4761,7 +4761,7 @@
 			(uuid "bdf9e306-af02-4ca9-adcb-1309b3e2be10")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR06")
 					(unit 1)
@@ -4979,7 +4979,7 @@
 			(uuid "e5e87bb8-f81b-4a29-9c59-3d013fa62908")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "J1")
 					(unit 1)
@@ -5191,7 +5191,7 @@
 			(uuid "b619b4a7-fa24-4625-9463-ab34cffc03da")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "P2")
 					(unit 1)
@@ -5259,7 +5259,7 @@
 			(uuid "683c9388-0e95-4758-b676-9ec54a0c36e5")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR08")
 					(unit 1)
@@ -5417,7 +5417,7 @@
 			(uuid "da155c00-1172-42d8-8c64-a95fafb5d88c")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "P1")
 					(unit 1)
@@ -5484,7 +5484,7 @@
 			(uuid "0d513456-986f-4ba9-8c4b-d51b589cd53c")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR07")
 					(unit 1)
@@ -5551,7 +5551,7 @@
 			(uuid "c4e879d4-8771-4af3-a297-65fde0b33068")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR02")
 					(unit 1)
@@ -5619,7 +5619,7 @@
 			(uuid "697e2831-7657-4ff7-a19d-44b9c758537e")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_alt1"
+			(project "FluxEngine_Hat_CDC_ALT1"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR04")
 					(unit 1)
