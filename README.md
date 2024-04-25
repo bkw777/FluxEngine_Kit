@@ -81,11 +81,15 @@ There are special hat versions just for CDC/MPI drives.
 Currently there are 2 CDC hats for CDC 9406 drives.  
 On page 5-4 in the [CDC 9406 manual](PCB/datasheets/77614903AM_9406_Flexible_Disk_Description_Jun82.pdf) there are 4 columns showing 4 different drive pinouts. columns 2, 3, & 4 are all the same for all the pins that matter, and column 1 is very different.  
 
-* "FluxEngine_Hat for CDC 9406 cfg 1" is for column 1  
+## FluxEngine_Hat for CDC 9406 cfg 1
+This is for column 1  
+
 ![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_1.jpg)
 ![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_1.svg)
 
-* "FluxEngine_Hat for CDC 9406 cfg 2" is for columns 2, 3, & 4
+## FluxEngine_Hat for CDC 9406 cfg 2
+This is for columns 2, 3, & 4
+
 ![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_2.jpg)
 ![](PCB/out/FluxEngine_Hat_CDC_9406_cfg_2.svg)
 
