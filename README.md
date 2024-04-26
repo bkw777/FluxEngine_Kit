@@ -83,16 +83,19 @@ CDC drives have a totally different pinout than Shugart. They actually have seve
 
 ----
 
-EDIT: I got this backwards. Both manuals say:
-```
-3.4.2  DC POWER CONNECTION  
+Confusingly, the manuals actually say  
+
+> 3.4.2  DC POWER CONNECTION  
 DC power (user-supplied) for standard FDD models is transmitted from the controller  
 via the I/O cable through the interface connector (J1) on the printed-circuit board.  
 Daisy-chain FDD models receive DC power (user-supplied) through a power cable which  
 interfaces with its mating connector (J4) on the printed-circuit board.
-```
-So the pinout I called ALT1 should be called "Standard"  
-and the pinout I called STD should be called "DaisyChain"
+
+So the pinout I just decided to call "standard" is the opposite of what MPI themselves call their "standard interface".  
+They apparently call that the "Daisy Chain" interface.  
+But there is no single pinout that has the DC power on the I/O cable.  
+There are several, different, and incompatible pinouts that all deliver the DC power via the I/O cable.  
+So for that reason I'll just stick with the labels I invented.
 
 ----
 
@@ -102,15 +105,12 @@ Right: [CDC 9406 FSM ('82)](PCB/datasheets/CDC_77614903_AM__9406_FSM.pdf)
 
 ![](PCB/datasheets/CDC_FDD_pinouts.png)
 
-There is a special hat for CDC which should work for all the green highlighted drives, and (I'm guessing) probably covers most CDC/MPI/Honeywell drives.
+There is a special hat for CDC which should work for all the green highlighted drives, and (I'm guessing) probably covers most CDC / MPI / Honeywell drives.
 
-There is also a hat version for "CDC ALT1", the purple highlight, simply because at least that pinout has the necessary signals that it's possible.  
-I have no idea if those models are common, or if the power really needs to be on the data cable or if the drives still have a simple way to provide the DC power directly. The hat includes the power connections simply because it was possible without even increasing the size of the pcb. The drive draws less than 1.5A on either rail, and both the screw terminals and the traces are good for over 5A. So although I don't really *recommend* powering a drive that way if there is any other option, it should be fully safe to do so.
-
-One of the other pinouts, the 4th column on the left table, under 75892150, is almost identical to "ALT1" with the only differences being it has STEP_IN + STEP_OUT instead of STEP + DIRECTION, but using the same 2 pins, and there is no READY signal. So maybe those drives could eventually be supported also by the same ALT1 hat with only software or firmware changes. Worst case I could probably add a tiny bit of logic to the board (probably a few gates in a single 74xx series) to optionally convert the STEP signals. I don't know about the lack of READY though.
+And there is a hat for the "ALT1" pinout, the purple highlight.
 
 THESE ARE NOT TESTED YET  
-I have a BR8A8A aka 77618019 drive on the way. That will be a test of the "CDC standard" hat.
+I have a 77618019 drive which will be a test of the standard CDC hat.
 
 ![](PCB/out/FluxEngine_Hat_CDC.svg)
 ![](PCB/out/FluxEngine_Hat_CDC.top.jpg)
