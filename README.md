@@ -130,6 +130,9 @@ The renders show a vertical style which is ideal because it allows the printed c
 A pluggable/unpluggable style would be even better but for now just for reference here is a link to the exact type in the render:  
 [2-pin 3.5mm pitch top-entry screw terminal](https://www.digikey.com/en/products/detail/on-shore-technology-inc/OSTTF020161/614572)
 
+adding the option to convert step+dir to stepin/stepout
+![](PCB/out/FluxEngine_Hat_CDC_ALT1_with_step_convert.svg)
+
 ### More 8-inch info
 
 The AC & DC power connectors were the same on many drives, both Shugart compatible and CDC even though the CDC data bus pinout is totally different.
