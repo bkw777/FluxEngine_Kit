@@ -77,37 +77,42 @@ Don't short either position by default, but do stow two inactive jumpers.
 
 # Control Data Corporation / Magnetic Peripherals Inc / Honeywell 8-inch drives
 
-CDC drives seem to have been pretty common. The same drives appear under a few different names because of the way they were [OEMed by MPI to CDC and Honeywell](https://en.wikipedia.org/wiki/Control_Data_Corporation#Magnetic_Peripherals_Inc.), and then CDC also sold them to yet others like [Centurion](https://www.youtube.com/watch?v=GmuDJC1gJOo).
+Drives from Control Data, Honeywell, and several others were all actually made by [Magnetic Peripherals](https://en.wikipedia.org/wiki/Control_Data_Corporation#Magnetic_Peripherals_Inc.).  
+CDC and Honeywell owned MPI, and MPI mostly only sold directly to them, and CDC OEMed the drives out to many others like [Centurion](https://www.youtube.com/watch?v=GmuDJC1gJOo), or my own drive which says "Educational Computer Corp mfg p/n 910033000-009" which is actually a CDC/MPI 77618019.
 
-CDC drives have a totally different pinout than Shugart. They actually have several different configurations and some are completely custom and incompatible, but most models seem to have used slight variations on one pinout. So I'll call that pinout "CDC standard".
+CDC drives seem to have been pretty common because of the number of computer system manufacturers, integrators, & resellers that all sourced their drives from CDC.
 
-----
+Some CDC drives like the 9404 line are Shugart-compatible. Use the SA850 hat for those.
 
-Confusingly, the manuals actually say  
+Other CDC drives (most others?) have several totally different interfaces. There are several different configurations and some are completely custom and incompatible, but two of those pinouts seem to cover most drives.
 
-> 3.4.2  DC POWER CONNECTION  
-DC power (user-supplied) for standard FDD models is transmitted from the controller  
-via the I/O cable through the interface connector (J1) on the printed-circuit board.  
-Daisy-chain FDD models receive DC power (user-supplied) through a power cable which  
-interfaces with its mating connector (J4) on the printed-circuit board.
+The manuals do "sort of" have names for these interfaces, one being "daisy chain" and the other being "standard", but while the "daisy chain" label is meaningful in that all the daisy-chain models have a compatible pinout with each other, what the manuals call "standard FDD interface" is actually a range of different and wildly incompatible interfaces.
 
-So the pinout I just decided to call "standard" is the opposite of what MPI themselves call their "standard interface".  
-They apparently call that the "Daisy Chain" interface.  
-But there is no single pinout that has the DC power on the I/O cable.  
-There are several, different, and incompatible pinouts that all deliver the DC power via the I/O cable.  
-So for that reason I'll just stick with the labels I invented.
+All in all, it appears that many, perhaps most drives actually have the "daisy chain" interface, and a good number of the others all share a common pinout which doesn't have a distinct name, and then there are several other pinouts that I have no idea how common they actually were. (actually I have no idea how common any of them were)
 
-----
+So for the purposes of having some sort of label to indicate which adapter hat pcb supports which drives, I am calling all of the "daisy chain" compatible pinouts collectively the "CDC" pinout, and what appears to be the next most common non-daisy-chain pinout I'm calling the "CDC ALT1" pinout.
 
-The two tables below come from two CDC manuals covering many similar drive models spanning a few years.  
+The two tables below come from two CDC manuals covering many similar drive models spanning several years.  
 Left: [CDC FDD FSM ('79)](PCB/datasheets/CDC_77834769_Y__FDD_FSM.pdf)  
 Right: [CDC 9406 FSM ('82)](PCB/datasheets/CDC_77614903_AM__9406_FSM.pdf)  
+
+The "CDC" hat supports all the green highlighted models.
+
+The "CDC ALT1" hat supports the purple highlighted models on the right side table.
+
+The Purple on the left table is *almost* all the same but just the STEP + DIRECTION pins don't work the normal way. The same two pins are still both STEP pins, but they mean STEP-IN and STEP-OUT instead of STEP + DIRECTION. It's possible those drives may be reconfigured to STEP+DIRECTION by just changing configuration jumpers, but I have not determined that one way or the other yet.
+
+It may also be possible to support those drives without changing either the drive or the hat pcb by just a software change to the FluxEngine client software or the fpga firmware.
+
+It is definitely also possible to support those drives by adding a single quad-nand to the hat pcb design to convert the signals.
 
 ![](PCB/datasheets/CDC_FDD_pinouts.png)
 
 There is a special hat for CDC which should work for all the green highlighted drives, and (I'm guessing) probably covers most CDC / MPI / Honeywell drives.
 
 And there is a hat for the "ALT1" pinout, the purple highlight.
+
+There is also a schematic but not a finished pcb that adds support for CDC that converts STEP+DIR to STEP_IN/STEP_OUT
 
 THESE ARE NOT TESTED YET  
 I have a 77618019 drive which will be a test of the standard CDC hat.
