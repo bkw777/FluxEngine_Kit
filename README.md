@@ -69,28 +69,19 @@ Connects either /DSKCHG or /READY output from the drive to the /DSKCHG input on 
 Install jumper on DC by default.
 
 ### DLK / HLD
-Connects the /MOTA (motor-A-on) output from the host to either the /DOOR-LOCK aka /IN-USE or /HEAD-LOAD input on the drive, or neither, or both.
+Connects the /MOTB (motor-B-on) output from the host to either the /DOOR-LOCK aka /IN-USE, or the /HEAD-LOAD input on the drive, or neither, or both.
 
 Usually not needed, but if needed, you may need one or the other or both.
 
 Don't short either position by default, but do stow two inactive jumpers.
 
-# Control Data Corporation / Magnetic Peripherals Inc / Honeywell 8-inch drives
+# Control Data / Magnetic Peripherals / Honeywell 8-inch drives
 
-Drives from Control Data, Honeywell, and several others were all actually made by [Magnetic Peripherals](https://en.wikipedia.org/wiki/Control_Data_Corporation#Magnetic_Peripherals_Inc.).  
-CDC and Honeywell owned MPI, and MPI mostly only sold directly to them, and CDC OEMed the drives out to many others like [Centurion](https://www.youtube.com/watch?v=GmuDJC1gJOo), or my own drive which says "Educational Computer Corp mfg p/n 910033000-009" which is actually a CDC/MPI 77618019.
+Some CDC drives like the 9404 line are Shugart compatible, and so for those just use the SA850 hat like any other Shugart bus drive.  
+(jumpers on HLD and RDY in that case)
 
-CDC drives seem to have been pretty common because of the number of computer system manufacturers, integrators, & resellers that all sourced their drives from CDC.
-
-Some CDC drives like the 9404 line are Shugart-compatible. Use the SA850 hat for those.
-
-Other CDC drives (most others?) have several totally different interfaces. There are several different configurations and some are completely custom and incompatible, but two of those pinouts seem to cover most drives.
-
-The manuals do "sort of" have names for these interfaces, one being "daisy chain" and the other being "standard", but while the "daisy chain" label is meaningful in that all the daisy-chain models have a compatible pinout with each other, what the manuals call "standard FDD interface" is actually a range of different and wildly incompatible interfaces.
-
-All in all, it appears that many, perhaps most drives actually have the "daisy chain" interface, and a good number of the others all share a common pinout which doesn't have a distinct name, and then there are several other pinouts that I have no idea how common they actually were. (actually I have no idea how common any of them were)
-
-So for the purposes of having some sort of label to indicate which adapter hat pcb supports which drives, I am calling all of the "daisy chain" compatible pinouts collectively the "CDC" pinout, and what appears to be the next most common non-daisy-chain pinout I'm calling the "CDC ALT1" pinout.
+But many (most?) CDC drives had totally different pinouts and interfaces, not remotely Shugart compatible.  
+There were several different interfaces and configurations, but of those, it does appear that most drives probably fall into one of two possible pinouts.
 
 The two tables below come from two CDC manuals covering many similar drive models spanning several years.  
 Left: [CDC FDD FSM ('79)](PCB/datasheets/CDC_77834769_Y__FDD_FSM.pdf)  
@@ -100,19 +91,14 @@ The "CDC" hat supports all the green highlighted models.
 
 The "CDC ALT1" hat supports the purple highlighted models on the right side table.
 
-The Purple on the left table is *almost* all the same but just the STEP + DIRECTION pins don't work the normal way. The same two pins are still both STEP pins, but they mean STEP-IN and STEP-OUT instead of STEP + DIRECTION. It's possible those drives may be reconfigured to STEP+DIRECTION by just changing configuration jumpers, but I have not determined that one way or the other yet.
+The ALT1 hat may possibly also support the purple column on the left by just swapping the W6 and W7 config jumpers on the drive. (a 0-ohm resistor soldered in the W7 location, that needs to be desoldered and moved to the W6 location, see manual page 5-6 for the relevant part of the schematic, and 5-10 for the location on the board, just above and left of center).  
+This is just a guess. I don't really know, so try it at your own risk. One thing is certain though, do not solder a jumper in both locations at the same time. It should be harmless to try as long as you don't do that.
 
-It may also be possible to support those drives without changing either the drive or the hat pcb by just a software change to the FluxEngine client software or the fpga firmware.
+It may also be possible to support those drives with the ALT1 hat by just a software change to the FluxEngine client software or fpga firmware to change how the FluxEngine generates the STEP+DIR signals.
 
-It is definitely also possible to support those drives by adding a single quad-nand to the hat pcb design to convert the signals.
+If all else fails there is always the brute force option which is just to add a single quad-nand to the hat pcb to convert the step+direction from the FluxEngine to step_in/step_out to the drive. I have the schematic done for that, but not the pcb layout yet.
 
 ![](PCB/datasheets/CDC_FDD_pinouts.png)
-
-There is a special hat for CDC which should work for all the green highlighted drives, and (I'm guessing) probably covers most CDC / MPI / Honeywell drives.
-
-And there is a hat for the "ALT1" pinout, the purple highlight.
-
-There is also a schematic but not a finished pcb that adds support for CDC that converts STEP+DIR to STEP_IN/STEP_OUT
 
 THESE ARE NOT TESTED YET  
 I have a 77618019 drive which will be a test of the standard CDC hat.
@@ -130,12 +116,12 @@ The renders show a vertical style which is ideal because it allows the printed c
 A pluggable/unpluggable style would be even better but for now just for reference here is a link to the exact type in the render:  
 [2-pin 3.5mm pitch top-entry screw terminal](https://www.digikey.com/en/products/detail/on-shore-technology-inc/OSTTF020161/614572)
 
-adding the option to convert step+dir to stepin/stepout
+adding the option to convert step+dir to step_in/step_out
 ![](PCB/out/FluxEngine_Hat_CDC_ALT1_with_step_convert.svg)
 
 ### More 8-inch info
 
-The AC & DC power connectors were the same on many drives, both Shugart compatible and CDC even though the CDC data bus pinout is totally different.
+The AC & DC power connectors were the same on many drives.
 
 These are the cable-side connector housings and female pins needed to make proper cables to connect to a drive.
 
