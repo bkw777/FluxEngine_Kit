@@ -128,8 +128,7 @@ https://www.digikey.com/en/products/detail/kyocera-avx/KGM21NR71E104KT/1116281
 
 ### More 8-inch info
 
-The AC & DC power connectors were the same on many drives, both Shugart compatible and CDC even though the CDC data bus pinout is totally different.
-
+The AC & DC power connectors were the same on many drives.  
 These are the cable-side connector housings and female pins needed to make proper cables to connect to most drives.
 
 3-pin AC power:  
