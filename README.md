@@ -43,8 +43,8 @@ There are several versions of printable cover in the CASE directory.
 ![](CASE/out/FancyCover.jpg)
 
 [FluxEngine_SimpleCover.stl](CASE/out/FluxEngine_SimpleCover.stl) - soldered and flush-cut pins  
-[FluxEngine_SimpleCover_solderless.stl](CASE/out/FluxEngine_SimpleCover_solderless.stl) - dry-fit full length pins   
-[FluxEngine_SimpleCover_sockets.stl](CASE/out/FluxEngine_SimpleCover_sockets.stl) - square pin sockets  
+[FluxEngine_SimpleCover_solderless.stl](CASE/out/FluxEngine_SimpleCover_solderless.stl) - solderless connection   
+[FluxEngine_SimpleCover_sockets.stl](CASE/out/FluxEngine_SimpleCover_sockets.stl) - 8.5mm sockets  
 
 ![](CASE/out/SimpleCover.jpg)  
 ![](PCB/out/SimpleCover_styles.jpg)
@@ -90,41 +90,50 @@ Right: [CDC 9406 FSM ('82)](PCB/datasheets/CDC_77614903_AM__9406_FSM.pdf)
 
 There are special hats for the most common CDC pinouts.
 
-The "CDC DaisyChain" hat supports all the green highlighted models.
+The "CDC-daisychain" hat supports all the green highlighted models.
 
-The "CDC 9406-std" hat supports the purple highlighted models.
+The "CDC-standard" hat supports the blue and purple highlighted models.  
+"standard" is mis-named because what CDC called "standard interface" in the manuals was several different pinouts and interfaces.  
+But of the many "standard" pinouts, 2 are the same except for STEP+DIRECTION vs STEP_IN/STEP_OUT, and most models that aren't daisychain seem to be one of these two versions of "standard".  
+So the CDC-standard hat includes logic to convert the STEP+DIRECTION signals from the FluxEngine to STEP_IN/STEP_OUT signals for the drive, and jumpers to select whether you want STEP+DIRECTION or STEP_IN/STEP_OUT.  
 
-The "CDC OLD-std" hat supports the blue highlighted models.
+For drives that need STEP_IN/STEP_OUT, install the 2 jumpers on the side marked OLD.  
+![](PCB/out/FluxEngine_Hat_CDC-standard.old.jpg)
 
-The 9406-std and OLD-std are actually the same except that the old interface had STEP_IN/STEP_OUT instead of STEP+DIRECTION.  
-So the OLD-std hat is just a copy of the 9406-std hat, with a quad-nand added to convert STEP+DIRECTION from the FluxEngine to STEP_IN/STEP_OUT for the drive.
+For drives that need STEP+DIRECTION, install the 2 jumpers on the side marked NEW.  
+![](PCB/out/FluxEngine_Hat_CDC-standard.new.jpg)
 
-THESE ARE NOT TESTED YET  
-I have a 77618019 drive which will be a test of the standard CDC hat.
+If you don't need the OLD option, you don't need to populate C1 or U1 or the jumper pin header. Just use solder in place of the NEW jumpers and leave the U1 and C1 footprints empty.
 
-![](PCB/out/FluxEngine_Hat_CDC_DaisyChain.svg)
-![](PCB/out/FluxEngine_Hat_CDC_DaisyChain.top.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_DaisyChain.bottom.jpg)
 
-![](PCB/out/FluxEngine_Hat_CDC_9406_STD.svg)
-![](PCB/out/FluxEngine_Hat_CDC_9406_STD.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_9406_STD.top.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_9406_STD.bottom.jpg)
+NONE OF THESE ARE TESTED YET  
+THIS IS ALL JUST THEORY AS OF NOW
 
-![](PCB/out/FluxEngine_Hat_CDC_OLD_STD.svg)
-![](PCB/out/FluxEngine_Hat_CDC_OLD_STD.top.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_OLD_STD.bottom.jpg)
+I have a 77618019 drive which will be a test of the CDC-daisychain hat, but not done yet.
 
-There's no BOM specifically for the CDC hats  
-The DaisyChain hat doesn't need anything else.  
+![](PCB/out/FluxEngine_Hat_CDC-daisychain.svg)
+![](PCB/out/FluxEngine_Hat_CDC-daisychain.top.jpg)
+![](PCB/out/FluxEngine_Hat_CDC-daisychain.bottom.jpg)
 
-Here's the pulggable 4-pin screw terminal for drives that get power from the I/O cable:  
-https://www.digikey.com/en/products/detail/phoenix-contact/5452094/5186805 header  
-https://www.digikey.com/en/products/detail/phoenix-contact/5452178/5187210 plug
+![](PCB/out/FluxEngine_Hat_CDC-standard.svg)
+![](PCB/out/FluxEngine_Hat_CDC-standard.jpg)
+![](PCB/out/FluxEngine_Hat_CDC-standard.1.jpg)
+![](PCB/out/FluxEngine_Hat_CDC-standard.2.jpg)
+![](PCB/out/FluxEngine_Hat_CDC-standard.top.jpg)
+![](PCB/out/FluxEngine_Hat_CDC-standard.bottom.jpg)
 
-And the chip & decoupling cap for the OLD-std hat:  
-https://www.digikey.com/en/products/detail/texas-instruments/SN74HC00PWR/377066  
-https://www.digikey.com/en/products/detail/kyocera-avx/KGM21NR71E104KT/1116281
+CDC hat BOMs
+
+CDC-daisychain:  
+Same as the default Shugart-compatible BOM, but delete the pins and jumpers.  
+
+CDC-standard:  
+Default BOM, delete the pins (keep the jumpers), add the following:  
+[screw terminal header](https://www.digikey.com/en/products/detail/phoenix-contact/5452094/5186805)  
+[screw terminal plug](https://www.digikey.com/en/products/detail/phoenix-contact/5452178/5187210)  
+[74HC00 tssop](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC00PWR/377066)  
+[C 0.1u 0805](https://www.digikey.com/en/products/detail/kyocera-avx/KGM21NR71E104KT/1116281)  
+[2x3x2.54mm pin header](https://www.digikey.com/en/products/detail/adam-tech/PH2-06-UA/9830396)  
 
 ### More 8-inch info
 

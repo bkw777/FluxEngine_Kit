@@ -5,9 +5,9 @@
 	(uuid "72d4cbf5-bf28-4978-b5d4-f13155888c6e")
 	(paper "User" 298.45 217.322)
 	(title_block
-		(title "FluxEngine_Hat for PC and CDC DaisyChain")
-		(date "2024-04-29")
-		(rev "002")
+		(title "FluxEngine_Hat for PC and CDC-daisychain")
+		(date "2024-04-30")
+		(rev "003")
 		(company "Brian K. White - b.kenyon.w@gmail.com")
 		(comment 1 "CC BY-SA")
 		(comment 2 "github.com/bkw777/FluxEngine_Kit")
@@ -3628,7 +3628,7 @@
 		)
 		(uuid "9e1b96a4-0643-4374-8efd-9f996c2ef56b")
 	)
-	(text "For Control Data / Magnetic Peripherals drives with \"Daisy Chain\" interface.\n\nNOT for Shugart-compatible or most other 8-inch drives.\n"
+	(text "For Control Data / Magnetic Peripherals drives with \"daisychain\" interface.\n\nNOT for Shugart-compatible or most other 8-inch drives.\n"
 		(exclude_from_sim no)
 		(at 152.908 38.608 0)
 		(effects
@@ -4194,7 +4194,7 @@
 			(uuid "bdf9e306-af02-4ca9-adcb-1309b3e2be10")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_DaisyChain"
+			(project "FluxEngine_Hat_CDC-daisychain"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR06")
 					(unit 1)
@@ -4412,7 +4412,7 @@
 			(uuid "e5e87bb8-f81b-4a29-9c59-3d013fa62908")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_DaisyChain"
+			(project "FluxEngine_Hat_CDC-daisychain"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "J1")
 					(unit 1)
@@ -4624,7 +4624,7 @@
 			(uuid "759a7df7-65c3-459e-8ad7-e40c3dbd997a")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_DaisyChain"
+			(project "FluxEngine_Hat_CDC-daisychain"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "P2")
 					(unit 1)
@@ -4692,7 +4692,7 @@
 			(uuid "683c9388-0e95-4758-b676-9ec54a0c36e5")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_DaisyChain"
+			(project "FluxEngine_Hat_CDC-daisychain"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR08")
 					(unit 1)
@@ -4850,7 +4850,7 @@
 			(uuid "d0c68858-98b2-4469-80a8-a03038c203b0")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_DaisyChain"
+			(project "FluxEngine_Hat_CDC-daisychain"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "P1")
 					(unit 1)
@@ -4917,7 +4917,7 @@
 			(uuid "0d513456-986f-4ba9-8c4b-d51b589cd53c")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_DaisyChain"
+			(project "FluxEngine_Hat_CDC-daisychain"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR07")
 					(unit 1)
@@ -4984,7 +4984,7 @@
 			(uuid "c4e879d4-8771-4af3-a297-65fde0b33068")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_DaisyChain"
+			(project "FluxEngine_Hat_CDC-daisychain"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR02")
 					(unit 1)
@@ -5052,7 +5052,7 @@
 			(uuid "697e2831-7657-4ff7-a19d-44b9c758537e")
 		)
 		(instances
-			(project "FluxEngine_Hat_CDC_DaisyChain"
+			(project "FluxEngine_Hat_CDC-daisychain"
 				(path "/72d4cbf5-bf28-4978-b5d4-f13155888c6e"
 					(reference "#PWR04")
 					(unit 1)
