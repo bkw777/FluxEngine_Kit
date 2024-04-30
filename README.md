@@ -69,22 +69,18 @@ Connects either /DSKCHG or /READY output from the drive to the /DSKCHG input on 
 Install jumper on DC by default.
 
 ### DLK / HLD
-Connects the /MOTA (motor-A-on) output from the host to either the /DOOR-LOCK aka /IN-USE or /HEAD-LOAD input on the drive, or neither, or both.
+Connects the /MOTB (motor-B-on) output from the host to either the /DOOR-LOCK aka /IN-USE, or /HEAD-LOAD input on the drive, or neither, or both.
 
 Usually not needed, but if needed, you may need one or the other or both.
 
 Don't short either position by default, but do stow two inactive jumpers.
 
-# Control Data Corporation / Magnetic Peripherals Inc / Honeywell 8-inch drives
+# Control Data / Magnetic Peripherals / Honeywell 8-inch drives
 
-Drives from Control Data, Honeywell, and several others were all actually made by [Magnetic Peripherals](https://en.wikipedia.org/wiki/Control_Data_Corporation#Magnetic_Peripherals_Inc.).  
-CDC and Honeywell owned MPI, and MPI mostly only sold directly to them, and CDC OEMed the drives out to many others like [Centurion](https://www.youtube.com/watch?v=GmuDJC1gJOo), or my own drive which says "Educational Computer Corp mfg p/n 910033000-009" which is actually a CDC/MPI 77618019.
+Some CDC drives like the 9404 line are Shugart compatible, and so for those just use the SA850 hat like any other Shugart bus drive (jumpers on HLD and RDY in that case)
 
-CDC drives seem to have been pretty common because of the number of computer system manufacturers, integrators, & resellers that all sourced their drives from CDC.
-
-Some CDC drives like the 9404 line are Shugart-compatible. Use the SA850 hat for those.
-
-Other CDC drives (most others?) have several totally different interfaces. There are several different configurations and some are completely custom and incompatible, but two of those pinouts seem to cover most drives.
+But many (most?) CDC drives had totally different pinouts and interfaces, not remotely Shugart compatible.  
+There were several different interfaces and configurations, but of those, it does appear that most drives probably fall into one of two possible pinouts.
 
 The two tables below come from two CDC manuals covering many similar drive models spanning several years.  
 Left: [CDC FDD FSM ('79)](PCB/datasheets/CDC_77834769_Y__FDD_FSM.pdf)  
