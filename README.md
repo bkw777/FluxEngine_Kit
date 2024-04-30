@@ -86,58 +86,55 @@ Some CDC drives like the 9404 line are Shugart-compatible. Use the SA850 hat for
 
 Other CDC drives (most others?) have several totally different interfaces. There are several different configurations and some are completely custom and incompatible, but two of those pinouts seem to cover most drives.
 
-The manuals do "sort of" have names for these interfaces, one being "daisy chain" and the other being "standard", but while the "daisy chain" label is meaningful in that all the daisy-chain models have a compatible pinout with each other, what the manuals call "standard FDD interface" is actually a range of different and wildly incompatible interfaces.
-
-All in all, it appears that many, perhaps most drives actually have the "daisy chain" interface, and a good number of the others all share a common pinout which doesn't have a distinct name, and then there are several other pinouts that I have no idea how common they actually were. (actually I have no idea how common any of them were)
-
-So for the purposes of having some sort of label to indicate which adapter hat pcb supports which drives, I am calling all of the "daisy chain" compatible pinouts collectively the "CDC" pinout, and what appears to be the next most common non-daisy-chain pinout I'm calling the "CDC ALT1" pinout.
-
 The two tables below come from two CDC manuals covering many similar drive models spanning several years.  
 Left: [CDC FDD FSM ('79)](PCB/datasheets/CDC_77834769_Y__FDD_FSM.pdf)  
 Right: [CDC 9406 FSM ('82)](PCB/datasheets/CDC_77614903_AM__9406_FSM.pdf)  
 
-The "CDC" hat supports all the green highlighted models.
-
-The "CDC ALT1" hat supports the purple highlighted models on the right side table.
-
-The Purple on the left table is *almost* all the same but just the STEP + DIRECTION pins don't work the normal way. The same two pins are still both STEP pins, but they mean STEP-IN and STEP-OUT instead of STEP + DIRECTION. It's possible those drives may be reconfigured to STEP+DIRECTION by just changing configuration jumpers, but I have not determined that one way or the other yet.
-
-It may also be possible to support those drives without changing either the drive or the hat pcb by just a software change to the FluxEngine client software or the fpga firmware.
-
-It is definitely also possible to support those drives by adding a single quad-nand to the hat pcb design to convert the signals.
-
 ![](PCB/datasheets/CDC_FDD_pinouts.png)
 
-There is a special hat for CDC which should work for all the green highlighted drives, and (I'm guessing) probably covers most CDC / MPI / Honeywell drives.
+There are special hats for the most common CDC pinouts.
 
-And there is a hat for the "ALT1" pinout, the purple highlight.
+The "CDC DaisyChain" hat supports all the green highlighted models.
 
-There is also a schematic but not a finished pcb that adds support for CDC that converts STEP+DIR to STEP_IN/STEP_OUT
+The "CDC 9406-std" hat supports the purple highlighted models.
+
+The "CDC OLD-std" hat supports the blue highlighted models.
+
+The 9406-std and OLD-std are actually the same except that the old interface had STEP_IN/STEP_OUT instead of STEP+DIRECTION.  
+So the OLD-std hat is just a copy of the 9406-std hat, with a quad-nand added to convert STEP+DIRECTION from the FluxEngine to STEP_IN/STEP_OUT for the drive.
 
 THESE ARE NOT TESTED YET  
 I have a 77618019 drive which will be a test of the standard CDC hat.
 
-![](PCB/out/FluxEngine_Hat_CDC.svg)
-![](PCB/out/FluxEngine_Hat_CDC.top.jpg)
-![](PCB/out/FluxEngine_Hat_CDC.bottom.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_DaisyChain.svg)
+![](PCB/out/FluxEngine_Hat_CDC_DaisyChain.top.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_DaisyChain.bottom.jpg)
 
-![](PCB/out/FluxEngine_Hat_CDC_ALT1.svg)
-![](PCB/out/FluxEngine_Hat_CDC_ALT1.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_ALT1.top.jpg)
-![](PCB/out/FluxEngine_Hat_CDC_ALT1.bottom.jpg)
-The screw terminal can be anything that fits the 3.5mm pin pitch footprint.
-The renders show a vertical style which is ideal because it allows the printed cover to be installed without bending the wires, and the cover ends up covering up the exposed screw heads too.
-A pluggable/unpluggable style would be even better but for now just for reference here is a link to the exact type in the render:  
-[2-pin 3.5mm pitch top-entry screw terminal](https://www.digikey.com/en/products/detail/on-shore-technology-inc/OSTTF020161/614572)
+![](PCB/out/FluxEngine_Hat_CDC_9406_STD.svg)
+![](PCB/out/FluxEngine_Hat_CDC_9406_STD.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_9406_STD.top.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_9406_STD.bottom.jpg)
 
-adding the option to convert step+dir to stepin/stepout
-![](PCB/out/FluxEngine_Hat_CDC_ALT1_with_step_convert.svg)
+![](PCB/out/FluxEngine_Hat_CDC_OLD_STD.svg)
+![](PCB/out/FluxEngine_Hat_CDC_OLD_STD.top.jpg)
+![](PCB/out/FluxEngine_Hat_CDC_OLD_STD.bottom.jpg)
+
+There's no BOM specifically for the CDC hats  
+The DaisyChain hat doesn't need anything else.  
+
+Here's the pulggable 4-pin screw terminal for drives that get power from the I/O cable:  
+https://www.digikey.com/en/products/detail/phoenix-contact/5452094/5186805 header  
+https://www.digikey.com/en/products/detail/phoenix-contact/5452178/5187210 plug
+
+And the chip & decoupling cap for the OLD-std hat:  
+https://www.digikey.com/en/products/detail/texas-instruments/SN74HC00PWR/377066  
+https://www.digikey.com/en/products/detail/kyocera-avx/KGM21NR71E104KT/1116281
 
 ### More 8-inch info
 
 The AC & DC power connectors were the same on many drives, both Shugart compatible and CDC even though the CDC data bus pinout is totally different.
 
-These are the cable-side connector housings and female pins needed to make proper cables to connect to a drive.
+These are the cable-side connector housings and female pins needed to make proper cables to connect to most drives.
 
 3-pin AC power:  
 Housing: [AMP/TE 1-480700-0](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/1-480700-0/29339)  
@@ -153,3 +150,16 @@ Here are a couple of supplies just for convenience & reference:
 [5V 3A Meanwell](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-15-5/7706168)  
 [24V 3.2A Meanwell](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-15-5/7706168)
 
+### Probably CDC-specific
+
+The CDC manuals do not say this anywhere, but many drives have a variant of the 50-pin connector with two polarity keys instead of one in the center. The drawings and actual part numbers in the service manuals only show the normal single-notch type.  
+A normal plug with polarity key does not fit. Non-polarized plugs fit, but here are a couple of fully polarity-keyed female IDC plugs that fit:  
+[Omron XG4M-5031-T](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/XG4M-5031-T/1829402)  
+[Hirose HIF3BA-50D-2.54R](https://www.digikey.com/en/products/detail/hirose-electric-co-ltd/HIF3BA-50D-2-54R-63/12758574)
+
+Connector housing & contacts to fit the 7-pin power connection on CDC drives.  
+The pins are .156" pitch which is not uncommon, but a .031"x.062" flat blade shape not square, so the "AMPMODU MOD I" is important here, as is specifically the high-pressure version of the pin receptacle.  
+Only 4 pins are connected, so you could uses as little as a 5-position housing, but ideally you still want a housing with 7 or more positions and receptacles installed for all 6 pins, because the extra 2 n/c pins provide extra retension friction and strain relief.  
+[TE 87159-7 - AMPMODU MOD I receptacle housing, 7-pin non-locking keyed](https://www.mouser.com/ProductDetail/TE-Connectivity-AMP/87159-7)  
+[TE 102100-2 - AMPMODU MOD I pin receptacle, non-locking high-pressure 18-22awg gold-30uin](https://www.mouser.com/ProductDetail/TE-Connectivity/102100-2) (need 6)  
+[TE 87116-2 - AMPMODU MOD I keying plug](https://us.rs-online.com/product/te-connectivity/87116-2/70287356/) (need 1)  

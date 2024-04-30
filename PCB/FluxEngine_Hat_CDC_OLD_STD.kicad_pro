@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.1,
-          "height": 2.2,
-          "width": 2.2
+          "drill": 0.7,
+          "height": 1.1,
+          "width": 1.1
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -178,7 +178,9 @@
       ],
       "track_widths": [
         0.0,
+        0.2,
         0.3,
+        0.4,
         1.7,
         2.0,
         3.0
@@ -213,6 +215,10 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -447,7 +453,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "FluxEngine_Hat_CDC_ALT1.kicad_pro",
+    "filename": "FluxEngine_Hat_CDC_OLD_STD.kicad_pro",
     "version": 1
   },
   "net_settings": {
