@@ -149,7 +149,7 @@ Housing: [AMP/TE 1-480270-0](https://www.digikey.com/en/products/detail/te-conne
 Female pins: [AMP/TE 61117-1](https://www.digikey.com/en/products/detail/te-connectivity-amp-connectors/61117-1/290254)
 
 They do make dual-output power supplies that output both 5v and 24v, but it's actually cheaper to buy seperate supplies.  
-A typical drive draws about 1.0A-1.5A from either DC rails while working.  
+A typical drive draws about 1.0A-1.5A from either DC rail while working.  
 Here are a couple of supplies just for convenience & reference:  
 [5V 3A Meanwell](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-15-5/7706168)  
 [24V 3.2A Meanwell](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-15-5/7706168)
