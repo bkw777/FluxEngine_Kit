@@ -24,6 +24,22 @@ If you're not trying to use 8-inch drives, then you don't need any adapter pcb l
 The FluxEngine pinout is already designed so that you can just solder a 34-pin connector directly to the CY8CKIT-059 fpga board.  
 You can use the BOM link below and delete everything but the CY8CKIT-059 and the 34-pin connector, no pcb, no printed cover.
 
+The PCBs are designed to NOT need to be soldered. You can connect and remove and reconnect the fpga board without, and without needing to install actual sockets.
+You CAN still solder them normally if you want to make a permanent FluxEngine, you just don't have to.
+
+It means you can swap the same fpga board between all 3 (so far) hat versions, and then still also use the fpga board on a breadboard when not using it for FluxEngine.
+
+What you do is solder pins to the bottom of the fpga board the same as if you were using it on a breadboard. And that's it. You can install actual matching sockets on the hat PCBs, but you don't have to. The zig/zag pin row layout on the hat PCBs makes solid electrical contact with the pins without needing a socket.
+
+For the sake of the solderless pin connections, I suggest getting the PCBs made with ENIG finish (gold plating on the copper).  
+It's not required though. Honestly the way the square edges of the pins bite into the via walls it probably will never make any difference.  
+Some fabricators charge more than others for ENIG. OSHPark is always ENIG no matter what, so that's easy. But between PCBWAY, JLCPCB, and Elecrow, Elecrow charges a lot less for ENIG.
+
+The cover (both styles) prints easily with any basic home FDM printer with PLA. I actually use a $150 Monoprice from 6 years ago.  
+
+But also these days most of the PCB shops also offer 3d printing, so you can get the pcb and the cover printed professionally in sintered nylon from the same place on the same order.  
+The link below is to PCBWAY only because it's the most convenient where you can just click "buy" on something already pre-loaded, but actually if you go to Elecrow and just upload the gerber zip and cover stl, it's just as simple and significantly cheaper, especially with ENIG.
+
 ## Parts
 [BOM from DigiKey](https://www.digikey.com/short/q5zh79n9)  
 [PCB and Cover from PCBWAY](https://www.pcbway.com/project/shareproject/FluxEngine_Hat_e3000eb5.html)
@@ -48,16 +64,6 @@ There are several versions of printable cover in the CASE directory.
 
 ![](CASE/out/SimpleCover.jpg)  
 ![](PCB/out/SimpleCover_styles.jpg)
-
-## Fabrication
-
-The cover prints easily with any common FDM printer with PLA.
-
-The PCBWAY link above can provide both the PCB and the cover. The buy link to the right is for the pcb. To get the cover scroll down the page to the STL file and it has it's own buy link.
-
-You can also get both the pcb and the cover at the same time on the same order from Elecrow for about $13 including shipping.  
-Get the gerber.zip and STL from [releases](../../releases).
-Choose high strength nylon for the 3d printing to get a strong black part. It doesn't really need the strength of nylon, but resin will probably be too fragile.
 
 ## Configuration
 
