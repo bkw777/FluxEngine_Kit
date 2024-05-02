@@ -52,18 +52,9 @@ If you don't already have a convenient way to power the floppy drive(s) external
 
 ## Cover
 
-There are several versions of printable cover in the CASE directory.
-
-[FluxEngine_FancyCover.stl](CASE/out/FluxEngine_FancyCover.stl)
-
+There are several versions of printable cover in releases, all generated from the same OpenSCAD file in the CASE directory.  
 ![](CASE/out/FancyCover.jpg)
-
-[FluxEngine_SimpleCover.stl](CASE/out/FluxEngine_SimpleCover.stl) - soldered and flush-cut pins  
-[FluxEngine_SimpleCover_solderless.stl](CASE/out/FluxEngine_SimpleCover_solderless.stl) - solderless connection   
-[FluxEngine_SimpleCover_sockets.stl](CASE/out/FluxEngine_SimpleCover_sockets.stl) - 8.5mm sockets  
-
-![](CASE/out/SimpleCover.jpg)  
-![](PCB/out/SimpleCover_styles.jpg)
+![](CASE/out/SimpleCover.jpg)
 
 ## Configuration
 
