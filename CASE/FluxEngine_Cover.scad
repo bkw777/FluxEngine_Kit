@@ -2,14 +2,21 @@
    Fancy Cover for FluxEngine_Hat
    Brian K. White - b.kenyon.w@gmail.com
    https://github.com/bkw777/FluxEngine_Kit
-   v013
+   v014
 */
 
 // -------------------------------------------------------------------------
+// ===== CONFIGURATION =====
 
 style = "simple";   // "fancy" "simple"
-lowprofile = false; // true false
-sockets = false;    // true false
+lowprofile = false;
+sockets = false;
+
+// for the lowprofile simple cover,
+// leave a thin wall over the usb plug
+lpx = false;
+
+orient_render_for_printing = false;
 
 // -------------------------------------------------------------------------
 // UNITS: mm
@@ -104,9 +111,9 @@ module simple_cover () {
   
     // remove
     union() {
-      bh = beh + teh + wt + 1;
-      translate([0,0,bh/2-beh+wt])
-        rounded_cube(w=rmaj+ew+rmaj,d=ed-wt*2,h=bh,rh=irmaj,rv=irmaj);
+      translate([0,0,eh/2-beh+wt])
+        rotate([90,0,90])
+          D(h=o+ew+o,d=eh,w=ed-wt*2,r=irmaj);
 
       ch = fc+pcb_h+pin_ins_h+fpga_pcb_h+fc;
       hull() {
@@ -118,11 +125,16 @@ module simple_cover () {
       }
       
       if (lowprofile) {
-        uch = wt*2;
         ucw = 20;
-        ucd = usb_plug_d+2;
-        translate([fpga_xpos-ucw/2-fpga_xlen/2,0,-bih-wt/2])
-          rounded_cube(w=ucw,d=ucd,h=uch,rh=r,rv=0.01);
+        if (lpx) {
+          translate([fpga_xpos-ucw/2-fpga_xlen/2,0,-beh+wt/2+mwt])
+            rotate([90,0,90])
+              D(d=wt,h=ucw,w=1+usb_plug_d+1,r=r);
+        } else {
+          translate([fpga_xpos-ucw/2-fpga_xlen/2,0,-beh+wt/2])
+            rotate([0,0,90])
+              D(h=o+wt+o,d=ucw,w=1+usb_plug_d+1,r=r);
+        }
       }
     
     }
@@ -149,8 +161,8 @@ module fancy_cover () {
   
     // cutouts
     union() {
-     cw = 20;   // cut width
-     ch = ih*2; // cut height
+     cw = 20;
+     ch = ih*2;
      // main top cutout
      translate([el/2+r+wt,0,ch/2-prog_h-prog_c-sockets_height])
       rounded_cube(w=iw+r*2+wt*2,d=pcb_d-rl*2,h=ch,rh=r,rv=r,t=0);
@@ -192,19 +204,16 @@ module fancy_cover () {
 // RENDER
 ///////////////////////////////////////////////////////////////
 
-//z = $preview ? 0 : beh;
-//translate ([0,0,z]) {
-  if (style=="fancy")
-    fancy_cover();
-  else
-    simple_cover();
-//}
-
-// orient simple_cover for printing
-/*
-r = $preview ? 0 : 90;
-z = $preview ? 0 : ew/2;
-translate ([beh-eh/2,0,z])
-  rotate([0,r,0])
-    simple_cover();
-*/
+  if (style=="fancy") {
+    pz = (orient_render_for_printing && !$preview) ? beh : 0;
+    translate ([0,0,pz])
+      fancy_cover();
+  }
+  else {
+    pr = (orient_render_for_printing && !$preview) ? 90 : 0;
+    pz = (orient_render_for_printing && !$preview) ? ew/2 : 0;
+    px = (orient_render_for_printing && !$preview) ? beh-eh/2 : 0;    
+    translate ([px,0,pz])
+      rotate([0,pr,0])
+        simple_cover();
+  }
