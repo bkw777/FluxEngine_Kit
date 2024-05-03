@@ -162,6 +162,6 @@ A normal plug with polarity key does not fit. Non-polarized plugs fit, but here 
 Connector housing & contacts to fit the 7-pin power connection on CDC drives.  
 The pins are .156" pitch which is not uncommon, but a .031"x.062" flat blade shape not square, so the "AMPMODU MOD I" is important here, as is specifically the high-pressure version of the pin receptacle.  
 Only 4 pins are connected, so you could uses as little as a 5-position housing, but ideally you still want a housing with 7 or more positions and receptacles installed for all 6 pins, because the extra 2 n/c pins provide extra retension friction and strain relief.  
-[TE 87159-7 - AMPMODU MOD I receptacle housing, 7-pin non-locking keyed](https://www.mouser.com/ProductDetail/TE-Connectivity-AMP/87159-7)  
-[TE 102100-2 - AMPMODU MOD I pin receptacle, non-locking high-pressure 18-22awg gold-30uin](https://www.mouser.com/ProductDetail/TE-Connectivity/102100-2) (need 6)  
+[TE 87159-7 - AMPMODU MOD I receptacle housing, 7-pin non-locking keyed](https://mou.sr/4bhcBrf) (cut the key bumps off)  
+[TE 102100-2 - AMPMODU MOD I pin receptacle, non-locking high-pressure 18-22awg gold-30uin](https://mou.sr/44tt5K6) (need 6)  
 [TE 87116-2 - AMPMODU MOD I keying plug](https://us.rs-online.com/product/te-connectivity/87116-2/70287356/) (need 1)  
