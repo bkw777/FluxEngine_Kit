@@ -5,8 +5,7 @@
    v014
 */
 
-// -------------------------------------------------------------------------
-// ===== CONFIGURATION =====
+// ===== OPTIONS ===============================================
 
 style = "simple";   // "fancy" "simple"
 lowprofile = false;
@@ -18,8 +17,7 @@ lpx = false;
 
 orient_render_for_printing = false;
 
-// -------------------------------------------------------------------------
-// UNITS: mm
+// =============================================================
 
 pcb_stl =
         (sockets) ? "PCBs_sockets.stl" :
@@ -28,7 +26,7 @@ pcb_stl =
 $fn = 36;         // arc smoothness
 
 wt = (style=="fancy") ? 1 : 2; // wall thickness
-fc = (style=="fancy") ? 0.4 : 0.2;  // fitment clearance
+fc = 0.4;         // fitment clearance
 o = 0.1;          // overcut/overlap/overextend
 r = 2.54;         // inside radii, 0.001 to (fc+usb_plug_h+fc)/2
 
@@ -79,7 +77,7 @@ irmaj = 2;
 rmaj = irmaj+wt;
 rmin = wt;
 
-// ===============================================================
+// =============================================================
 
 include <handy.scad>;
 
@@ -153,27 +151,27 @@ module simple_cover () {
 module fancy_cover () {
   union() {
   
-   difference() {
+    difference() {
   
-    // main body shell
-    translate([el/2,0,-ih/2+tih])
-     rounded_cube(w=iw,d=id,h=ih,rh=r,rv=r,t=wt);
+      // main body shell
+      translate([el/2,0,-ih/2+tih])
+        rounded_cube(w=iw,d=id,h=ih,rh=r,rv=r,t=wt);
   
-    // cutouts
-    union() {
-     cw = 20;
-     ch = ih*2;
-     // main top cutout
-     translate([el/2+r+wt,0,ch/2-prog_h-prog_c-sockets_height])
-      rounded_cube(w=iw+r*2+wt*2,d=pcb_d-rl*2,h=ch,rh=r,rv=r,t=0);
-     // usb port
-     translate([-cw/2-fpga_xlen/2+fpga_xpos,0,-pin_ins_h-fpga_pcb_h-usb_jack_h/2])
-      rounded_cube(w=cw,d=fc+usb_plug_d+fc,h=fc+usb_plug_h+fc,rh=r,rv=r,t=0);
+      // cutouts
+      union() {
+        cw = 20;
+        ch = ih*2;
+        // main top cutout
+        translate([el/2+r+wt,0,ch/2-prog_h-prog_c-sockets_height])
+          rounded_cube(w=iw+r*2+wt*2,d=pcb_d-rl*2,h=ch,rh=r,rv=r,t=0);
+        // usb port
+        translate([-cw/2-fpga_xlen/2+fpga_xpos,0,-pin_ins_h-fpga_pcb_h-usb_jack_h/2])
+          rounded_cube(w=cw,d=fc+usb_plug_d+fc,h=fc+usb_plug_h+fc,rh=r,rv=r,t=0);
+      }
+  
     }
   
-   }
-  
-   // support & registration posts
+    // support & registration posts
     translate([fpga_xpos,0,-fc]) {
       mirror_copy([1,0,0]) {
         translate([fpga_xlen/2+post_w/2+fc,0,0]) {
@@ -208,8 +206,7 @@ module fancy_cover () {
     pz = (orient_render_for_printing && !$preview) ? beh : 0;
     translate ([0,0,pz])
       fancy_cover();
-  }
-  else {
+  } else {
     pr = (orient_render_for_printing && !$preview) ? 90 : 0;
     pz = (orient_render_for_printing && !$preview) ? ew/2 : 0;
     px = (orient_render_for_printing && !$preview) ? beh-eh/2 : 0;    
