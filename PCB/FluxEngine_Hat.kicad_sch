@@ -4095,7 +4095,7 @@
 		)
 		(uuid "4f8c80c7-19a9-445a-815d-4176c28c52b3")
 	)
-	(text "Supports Shugart SA800-851 and most other 8-inch drives, ex: YD-174\n\nNOT for Control Data / Magnetic Peripherals!"
+	(text "Supports Shugart SA800-851 and most other 8-inch drives."
 		(exclude_from_sim no)
 		(at 139.7 38.1 0)
 		(effects
