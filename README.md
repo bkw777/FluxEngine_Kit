@@ -52,7 +52,7 @@ If you don't already have a convenient way to power the floppy drive(s) external
 
 ## Cover
 
-There are several versions of printable cover in releases, all generated from the same OpenSCAD source.  
+There are a few versions of printable cover in releases, all generated from the same OpenSCAD source.  
 Two main styles, simple and fancy, in three sizes each, lowprofile, default, and one for if you have full pin sockets installed.  
 ![](CASE/out/FancyCover.jpg)
 ![](CASE/out/SimpleCover.jpg)
