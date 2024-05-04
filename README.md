@@ -75,9 +75,9 @@ Don't short either position by default, but do stow two inactive jumpers.
 
 # Control Data / Magnetic Peripherals / Honeywell 8-inch drives
 
-Some CDC drives like the 9404 line are Shugart compatible, and so for those just use the SA850 hat like any other Shugart bus drive (jumpers on HLD and RDY in that case)
+Some CDC drives like the 9404 and 9406-4 lines are Shugart compatible, and so for those just use the SA850 hat like any other Shugart bus drive.
 
-But many (most?) CDC drives had totally different pinouts and interfaces, not remotely Shugart compatible.  
+But many CDC drives had totally different pinouts and interfaces, not remotely Shugart compatible.  
 There were several different interfaces and configurations, but of those, it does appear that most drives probably fall into one of two possible pinouts.
 
 The two tables below come from two CDC manuals covering many similar drive models spanning several years.  
