@@ -61,17 +61,22 @@ Two main styles, simple and fancy, in three sizes each, lowprofile, default, and
 
 The jumpers only affect the 50-pin connector for 8-inch drives.  
 
-### DC / RDY
-Connects either /DSKCHG or /READY output from the drive to the /DSKCHG input on the host.  
+### DSKCHG / READY
+Connects either the /DSKCHG or /READY output from the drive to the /DSKCHG input on the FluxEngine.  
 
-Install jumper on DC by default.
+Install jumper on DSKCHG by default.
 
-### DLK / HLD
-Connects the /MOTB (motor-B-on) output from the host to either the /DOOR-LOCK aka /IN-USE, or /HEAD-LOAD input on the drive, or neither, or both.
+### INUSE
+Connects the /MOTB (motor-B-on) output from the FluxEngine to the /IN-USE aka /DOOR-LOCK input on the drive.
 
-Usually not needed, but if needed, you may need one or the other or both.
+Not connected by default, but stow a jumper on one pin.
 
-Don't short either position by default, but do stow two inactive jumpers.
+### HLD
+Connects the /MOTB (motor-B-on) output from the FluxEngine to the /HEAD-LOAD input on the drive.
+
+Not connected by default, but stow a jumper on one pin.
+
+INUSE/HLD is not either-or. You may need either, or neither, or both.
 
 # Control Data / Magnetic Peripherals / Honeywell 8-inch drives
 
@@ -85,15 +90,15 @@ Right: [CDC 9406 FSM ('82)](PCB/datasheets/CDC_77614903_AM__9406_FSM.pdf)
 
 ![](PCB/datasheets/CDC_FDD_pinouts.png)
 
-There are 2 CDC hats that cover the most common CDC pinouts.
+There are two hats that cover the most common CDC pinouts.
 
 The "CDC-daisychain" hat supports all the green highlighted models.
 
 The "CDC-standard" hat supports the blue and purple highlighted models.
 
 "standard" is mis-named because what CDC called "standard interface" in the manuals was several different pinouts and interfaces.  
-But of the many "standard" pinouts, 2 are actually the same except for STEP+DIRECTION vs STEP_IN/STEP_OUT, and most models that don't have the "daisychain" interface seem to have one of these two versions of "standard".  
-So the CDC-standard hat includes logic to optionally convert the STEP+DIRECTION signals from the FluxEngine to STEP_IN/STEP_OUT signals for the drive if needed.
+But of the several pinouts they called "standard", 2 are actually the same except for STEP+DIRECTION vs STEP_IN/STEP_OUT, and most models that don't have the "daisychain" interface seem to have one of these two versions of "standard".  
+So the '''CDC-standard''' hat includes logic to optionally convert the STEP+DIRECTION signals from the FluxEngine to STEP_IN/STEP_OUT signals for the drive if needed.
 
 For drives that need STEP_IN/STEP_OUT, install the 2 jumpers on the side marked OLD.  
 ![](PCB/out/FluxEngine_Hat_CDC-standard.old.jpg)
@@ -101,13 +106,14 @@ For drives that need STEP_IN/STEP_OUT, install the 2 jumpers on the side marked 
 For drives that need STEP+DIRECTION, install the 2 jumpers on the side marked NEW.  
 ![](PCB/out/FluxEngine_Hat_CDC-standard.new.jpg)
 
-If you don't need the OLD option, you don't need to populate C1 or U1 or the jumper pin header. Just use solder or wire in place of the NEW jumpers and leave the U1 and C1 footprints empty.
+If you don't need the OLD option, you don't need to populate C1 or U1 or the jumper pin header. Just use solder or wire in place of the NEW jumpers and leave the U1 and C1 footprints empty.  
+![](PCB/out/FluxEngine_Hat_CDC-standard.new-only.jpg)
 
 
 NONE OF THESE ARE TESTED YET  
 THIS IS ALL JUST THEORY AS OF NOW
 
-I have a 77618019 drive which will be a test of the CDC-daisychain hat, but not done yet.
+I have a 77618019 drive which will be a test of the '''CDC-daisychain''' hat, but not performed yet.
 
 ![](PCB/out/FluxEngine_Hat_CDC-daisychain.svg)
 ![](PCB/out/FluxEngine_Hat_CDC-daisychain.top.jpg)
