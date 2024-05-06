@@ -6,8 +6,6 @@
 ![](PCB/out/FluxEngine_Hat.4.jpg)
 ![](PCB/out/FluxEngine_Hat.5.jpg)
 ![](PCB/out/FluxEngine_Hat.6.jpg)
-![](PCB/out/SimpleCover_front.jpg)
-![](PCB/out/SimpleCover_back.jpg)
 ![](PCB/out/FluxEngine_Hat.top.jpg)
 ![](PCB/out/FluxEngine_Hat.bottom.jpg)
 ![](PCB/out/FluxEngine_Hat.svg)
@@ -54,8 +52,6 @@ If you don't already have a convenient way to power the floppy drive(s) external
 
 There are a few versions of printable cover in releases, all generated from the same OpenSCAD source.  
 Two main styles, simple and fancy, in three sizes each, lowprofile, default, and one for if you have full pin sockets installed.  
-![](CASE/out/FancyCover.jpg)
-![](CASE/out/SimpleCover.jpg)
 
 ## Configuration
 
@@ -121,8 +117,6 @@ I have a 77618019 drive which will be a test of the '''CDC-daisychain''' hat, bu
 
 ![](PCB/out/FluxEngine_Hat_CDC-standard.svg)
 ![](PCB/out/FluxEngine_Hat_CDC-standard.jpg)
-![](PCB/out/FluxEngine_Hat_CDC-standard.1.jpg)
-![](PCB/out/FluxEngine_Hat_CDC-standard.2.jpg)
 ![](PCB/out/FluxEngine_Hat_CDC-standard.top.jpg)
 ![](PCB/out/FluxEngine_Hat_CDC-standard.bottom.jpg)
 
