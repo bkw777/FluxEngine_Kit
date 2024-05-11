@@ -96,13 +96,13 @@ The "CDC-standard" hat supports the blue and purple highlighted models.
 But of the several pinouts they called "standard", 2 are actually the same except for STEP+DIRECTION vs STEP_IN/STEP_OUT, and most models that don't have the "daisychain" interface seem to have one of these two versions of "standard".  
 So the '''CDC-standard''' hat includes logic to optionally convert the STEP+DIRECTION signals from the FluxEngine to STEP_IN/STEP_OUT signals for the drive if needed.
 
-For drives that need STEP_IN/STEP_OUT, install the 2 jumpers on the side marked OLD.  
+For drives that need STEP_IN/STEP_OUT, install the 2 jumpers on STEP_IN and STEP_OUT.  
 ![](PCB/out/FluxEngine_Hat_CDC-standard.old.jpg)
 
-For drives that need STEP+DIRECTION, install the 2 jumpers on the side marked NEW.  
+For drives that need STEP+DIRECTION, install the 2 jumpers on DIR and STEP.  
 ![](PCB/out/FluxEngine_Hat_CDC-standard.new.jpg)
 
-If you don't need the OLD option, you don't need to populate C1 or U1 or the jumper pin header. Just use solder or wire in place of the NEW jumpers and leave the U1 and C1 footprints empty.  
+If you don't need the STEP_IN/STEP_OUT option, you don't need to populate C1 or U1 or the jumper pins. Just use solder or wire in place of the STEP & DIR jumpers and leave the U1 and C1 footprints empty.  
 ![](PCB/out/FluxEngine_Hat_CDC-standard.new-only.jpg)
 
 
@@ -126,12 +126,11 @@ CDC-daisychain:
 Same as the default Shugart-compatible BOM, but delete the pins and jumpers.  
 
 CDC-standard:  
-Default BOM, delete the pins (keep the jumpers), add the following:  
+Default BOM, delete the 1x2 pins, double the 1x3 pins, add these:  
 [screw terminal header](https://www.digikey.com/en/products/detail/phoenix-contact/5452094/5186805)  
 [screw terminal plug](https://www.digikey.com/en/products/detail/phoenix-contact/5452178/5187210)  
-[74HC00 tssop](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC00PWR/377066)  
+[74LVC1G19 1to2 decoder](https://www.digikey.com/en/products/detail/nexperia-usa-inc/74LVC1G19GW-125/1231453)  
 [C 0.1u 0805](https://www.digikey.com/en/products/detail/kyocera-avx/KGM21NR71E104KT/1116281)  
-[2x3x2.54mm pin header](https://www.digikey.com/en/products/detail/adam-tech/PH2-06-UA/9830396)  
 
 ### More 8-inch info
 
