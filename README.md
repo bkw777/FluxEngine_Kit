@@ -42,7 +42,7 @@ The link below is to PCBWAY only because it's the most convenient where you can 
 [BOM from DigiKey](https://www.digikey.com/short/q5zh79n9)  
 [PCB and Cover from PCBWAY](https://www.pcbway.com/project/shareproject/FluxEngine_Hat_e3000eb5.html)
 
-If you don't already have a convenient way to power the floppy drive(s) externally:  
+Power supply and cables:  
 [Molex power supply](https://amazon.com/dp/B000MGG6SC)  
 [Molex to Berg splitter](https://amazon.com/dp/B0002J1KW6)  
 [Molex to Molex splitter](https://amazon.com/dp/B00007JO36)  
@@ -78,7 +78,7 @@ INUSE/HLD is not either-or. You may need either, or neither, or both.
 
 Some CDC 8-inch drives like the 9404 and 9406-4 lines are Shugart compatible, and so for those just use the SA850 hat like any other Shugart interface drive.
 
-Others have more or less compatible signals but several different pinouts.
+Others have compatible signals but different pinouts.
 
 The two tables below come from two CDC manuals covering many similar drive models spanning several years.  
 Left: [CDC FDD FSM ('79)](PCB/datasheets/CDC_77834769_Y__FDD_FSM.pdf)  
@@ -96,10 +96,10 @@ The "CDC-standard" hat supports the blue and purple highlighted models.
 But of the several pinouts they called "standard", 2 are actually the same except for STEP+DIRECTION vs STEP_IN/STEP_OUT, and most models that don't have the "daisychain" interface seem to have one of these two versions of "standard".  
 So the '''CDC-standard''' hat includes logic to optionally convert the STEP+DIRECTION signals from the FluxEngine to STEP_IN/STEP_OUT signals for the drive if needed.
 
-For drives that need STEP_IN/STEP_OUT, install the 2 jumpers on STEP_IN and STEP_OUT.  
+For drives that need STEP_IN/STEP_OUT, install the 2 jumpers on STEP_IN and STEP_OUT. (earlier and less common drives)  
 ![](PCB/out/FluxEngine_Hat_CDC-standard.old.jpg)
 
-For drives that need STEP+DIRECTION, install the 2 jumpers on DIR and STEP.  
+For drives that need STEP+DIRECTION, install the 2 jumpers on DIR and STEP. (default, later and more common drives)  
 ![](PCB/out/FluxEngine_Hat_CDC-standard.new.jpg)
 
 If you don't need the STEP_IN/STEP_OUT option, you don't need to populate C1 or U1 or the jumper pins. Just use solder or wire in place of the STEP & DIR jumpers and leave the U1 and C1 footprints empty.  
@@ -107,9 +107,6 @@ If you don't need the STEP_IN/STEP_OUT option, you don't need to populate C1 or 
 
 
 NONE OF THESE ARE TESTED YET  
-THIS IS ALL JUST THEORY AS OF NOW
-
-I have a 77618019 drive which will be a test of the '''CDC-daisychain''' hat, but not performed yet.
 
 ![](PCB/out/FluxEngine_Hat_CDC-daisychain.svg)
 ![](PCB/out/FluxEngine_Hat_CDC-daisychain.top.jpg)
@@ -120,13 +117,11 @@ I have a 77618019 drive which will be a test of the '''CDC-daisychain''' hat, bu
 ![](PCB/out/FluxEngine_Hat_CDC-standard.top.jpg)
 ![](PCB/out/FluxEngine_Hat_CDC-standard.bottom.jpg)
 
-CDC hat BOMs
+CDC-daisychain BOM:  
+Standard BOM, delete the jumpers.  
 
-CDC-daisychain:  
-Same as the default Shugart-compatible BOM, but delete the pins and jumpers.  
-
-CDC-standard:  
-Default BOM, delete the 1x2 pins, double the 1x3 pins, add these:  
+CDC-standard BOM:  
+Standard BOM, add these:  
 [screw terminal header](https://www.digikey.com/en/products/detail/phoenix-contact/5452094/5186805)  
 [screw terminal plug](https://www.digikey.com/en/products/detail/phoenix-contact/5452178/5187210)  
 [74LVC1G19 1to2 decoder](https://www.digikey.com/en/products/detail/nexperia-usa-inc/74LVC1G19GW-125/1231453)  
@@ -153,14 +148,15 @@ Here are a couple of supplies just for convenience & reference:
 
 ### Probably CDC-specific
 
-The CDC manuals do not say this anywhere, but many drives have a variant of the 50-pin connector with two polarity keys instead of one in the center. The drawings and actual part numbers in the service manuals only show the normal single-notch type.  
-A normal plug with polarity key does not fit. Non-polarized plugs fit, but here are a couple of fully polarity-keyed female IDC plugs that fit:  
+The CDC manuals do not say this anywhere, but many drives have a variant of the 50-pin IDC header with two polarity key slots instead of one in the center. The drawings and actual part numbers in the service manuals only show the normal single-notch type.  
+A normal IDC plug with polarity key does not fit. Non-polarized plugs fit, but here are a couple of fully polarity-keyed female IDC plugs that fit:  
 [Omron XG4M-5031-T](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/XG4M-5031-T/1829402)  
 [Hirose HIF3BA-50D-2.54R](https://www.digikey.com/en/products/detail/hirose-electric-co-ltd/HIF3BA-50D-2-54R-63/12758574)
 
 Connector housing & contacts to fit the 7-pin power connection on CDC drives.  
-The pins are .156" pitch which is not uncommon, but a .031"x.062" flat blade shape not square, so the "AMPMODU MOD I" is important here, as is specifically the high-pressure version of the pin receptacle.  
-Only 4 pins are connected, so you could uses as little as a 5-position housing, but ideally you still want a housing with 7 or more positions and receptacles installed for all 6 pins, because the extra 2 n/c pins provide extra retension friction and strain relief.  
-[TE 87159-7 - AMPMODU MOD I receptacle housing, 7-pin non-locking keyed](https://mou.sr/4bhcBrf) (cut the key bumps off)  
+The pins are .156" pitch, and have a .031"x.062" flat blade shape not square.  
+The pin and housing series is called "AMPMODU MOD I", and you want specifically the high pressure version of the receptacles for power vs merely signal usage.  
+Only the 4 middle pins are connected, so you could uses as little as a 5-position housing, but ideally you still want a housing with all 7 (or more) positions, and receptacles installed for all 6 pins, because the extra 2 pins provide both strain relief and extra retention friction.  
+[TE 87159-7 - AMPMODU MOD I receptacle housing, 7-pin, non-locking, keyed](https://mou.sr/4bhcBrf) (cut the key bumps off)  
 [TE 102100-2 - AMPMODU MOD I pin receptacle, non-locking high-pressure 18-22awg gold-30uin](https://mou.sr/44tt5K6) (need 6)  
 [TE 87116-2 - AMPMODU MOD I keying plug](https://us.rs-online.com/product/te-connectivity/87116-2/70287356/) (need 1)  
