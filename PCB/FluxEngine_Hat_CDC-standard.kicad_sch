@@ -5616,7 +5616,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LVC1G19"
+		(property "Value" "1G19"
 			(at 148.2441 129.54 0)
 			(effects
 				(font

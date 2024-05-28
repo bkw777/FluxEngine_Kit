@@ -5,9 +5,9 @@
 	(uuid "72d4cbf5-bf28-4978-b5d4-f13155888c6e")
 	(paper "User" 298.45 217.322)
 	(title_block
-		(title "FluxEngine_Hat for PC and SA850")
-		(date "2024-04-25")
-		(rev "014")
+		(title "FluxEngine_Hat for PC and Shugart")
+		(date "2024-05-27")
+		(rev "015")
 		(company "Brian K. White - b.kenyon.w@gmail.com")
 		(comment 1 "CC BY-SA")
 		(comment 2 "github.com/bkw777/FluxEngine_Kit")
@@ -4084,7 +4084,7 @@
 		)
 		(uuid "2176ed83-3dd1-4943-ada7-bfa6d88fa506")
 	)
-	(text "FluxEngine treats Drive-Select-B and Motor-On-B as \"drive 0\".\n\nPC drives are all configured to be \"B:\" drives, and rely on the cable twist to become \"A:\" drives.\nA normal PC drive connected directly to the FluxEngine with no twist will appear as \"drive 0\".\n\nFor the 50-pin connector for 8-inch drives:\nConnect ~{DSB} from the FluxEngine to ~{DS1} on the drive.\nConnect ~{MOTB} from the FluxEngine to ~{HLD} and/or ~{DLOCK} and/or ~{INUSE} on the drive.\n"
+	(text "FluxEngine treats Drive-Select-B and Motor-On-B as \"drive 0\".\n\nPC drives are all configured to be \"B:\" drives, and rely on the cable twist to become \"A:\" drives.\nA normal PC drive connected directly to the FluxEngine with no twist will appear as \"drive 0\".\n\nFor the 50-pin connector for 8-inch drives:\nConnect ~{DSB} from the FluxEngine to ~{DS1} on the drive (counting from 1).\nConnect ~{MOTB} from the FluxEngine to ~{HLD} and/or ~{DLOCK} and/or ~{INUSE} on the drive.\n"
 		(exclude_from_sim no)
 		(at 63.5 196.596 0)
 		(effects
@@ -4095,7 +4095,7 @@
 		)
 		(uuid "4f8c80c7-19a9-445a-815d-4176c28c52b3")
 	)
-	(text "Supports Shugart SA800-851 and most other 8-inch drives."
+	(text "Supports Shugart SA800-SA851 and most other 8-inch drives."
 		(exclude_from_sim no)
 		(at 139.7 38.1 0)
 		(effects
