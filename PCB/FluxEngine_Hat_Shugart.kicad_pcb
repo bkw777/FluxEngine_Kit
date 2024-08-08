@@ -5632,7 +5632,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "CY8CKIT-059  usb & button face away from hat"
+	(gr_text "CY8CKIT-059 this side face up"
 		(at 147.955001 104.139999 0)
 		(layer "B.SilkS")
 		(uuid "ea8f3477-3857-44b3-a3fe-bdb1c46671d5")
