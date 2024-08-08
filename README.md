@@ -6,9 +6,9 @@
 ![](PCB/out/FluxEngine_Hat.4.jpg)
 ![](PCB/out/FluxEngine_Hat.5.jpg)
 ![](PCB/out/FluxEngine_Hat.6.jpg)
-![](PCB/out/FluxEngine_Hat.top.jpg)
-![](PCB/out/FluxEngine_Hat.bottom.jpg)
-![](PCB/out/FluxEngine_Hat.svg)
+![](PCB/out/FluxEngine_Hat_Shugart.top.jpg)
+![](PCB/out/FluxEngine_Hat_Shugart.bottom.jpg)
+![](PCB/out/FluxEngine_Hat_Shugart.svg)
 
 THESE PCBs ARE NOT TESTED YET
 
